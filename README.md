@@ -1,8 +1,8 @@
 # India Compliance Registry
 
-**38 verified compliance facts across 22 frameworks** — every entry cites its primary source (Gazette, regulator, standards body) and carries a last-verified date. Maintained by [CyberSigma](https://cybersigmacs.com), a CERT-In empanelled, PCI SSC-listed QSA firm.
+**40 verified compliance facts across 24 frameworks** — every entry cites its primary source (Gazette, regulator, standards body) and carries a last-verified date. Maintained by [CyberSigma](https://cybersigmacs.com), a CERT-In empanelled, PCI SSC-listed QSA firm.
 
-Registry version: **v1.6.0** · Canonical live version: <https://cybersigmacs.com/compliance-registry/> · Machine-readable: [registry.json](registry.json)
+Registry version: **v1.7.0** · Canonical live version: <https://cybersigmacs.com/compliance-registry/> · Machine-readable: [registry.json](registry.json)
 
 ## Why this exists
 
@@ -76,6 +76,12 @@ Compliance dates get misquoted constantly. This registry is verify-first: nothin
 |---|---|---|---|---|
 | ISNP audit duty | Insurance Self-Network Platforms require IRDAI permission (with pre-launch security testing) and an annual audit by an auditor holding a recognised IS-audit qualification (e.g. CISA, or CA with DISA); adverse findings affecting policyholders are reported to IRDAI with an action plan. | — | [IRDAI](https://www.irdai.gov.in/) | 2026-07-31 |
 
+### IRDAI (India insurance)
+
+| Fact | Value | Effective | Source | Verified |
+|---|---|---|---|---|
+| Information and Cyber Security Guidelines, 2023 | IRDAI issued the Information and Cyber Security Guidelines, 2023 on 24 April 2023 (ref IRDAI/GA&HR/GDL/MISC/88/04/2023), superseding the 2017 guidelines (IRDA/IT/GDL/MISC/082/04/2017) and three subsequent circulars. Scope extends beyond insurers to intermediaries including brokers, corporate agents, web aggregators, TPAs, ISNPs and IIB. | 2023-04-24 | [IRDAI - Information and Cyber Security Guidelines, 2023 (official document portal)](https://irdai.gov.in/document-detail?documentId=3314780) | 2026-08-02 |
+
 ### ISO 22301
 
 | Fact | Value | Effective | Source | Verified |
@@ -105,6 +111,12 @@ Compliance dates get misquoted constantly. This registry is verify-first: nothin
 | Fact | Value | Effective | Source | Verified |
 |---|---|---|---|---|
 | Version 2.0 release | NIST released Cybersecurity Framework 2.0 on 26 February 2024 — the first major revision since 2014, adding the Govern function and broadening applicability beyond critical infrastructure. | 2024-02-26 | [NIST (official release announcement)](https://www.nist.gov/news-events/news/2024/02/nist-releases-version-20-landmark-cybersecurity-framework) | 2026-08-01 |
+
+### NPCI / UPI
+
+| Fact | Value | Effective | Source | Verified |
+|---|---|---|---|---|
+| TPAP guidelines - audit and data obligations (OC 97) | NPCI's Guidelines for Third-Party Application Providers in UPI (circular OC 97, 2020) impose audit and compliance obligations on TPAPs, including audits by CERT-In empanelled auditors and UPI data storage within India; PSP banks retain audit rights over TPAP UPI infrastructure. | — | [NPCI circular OC 97 - Guidelines for TPAPs in UPI (official PDF)](https://www.npci.org.in/PDF/npci/upi/circular/2020/OC-97-Guidelines-for-TPAPs-in-UPI.pdf) | 2026-08-02 |
 
 ### OWASP ASVS
 
