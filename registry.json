@@ -1,10 +1,14 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "updated": "2026-08-04",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-08-04",
+      "change": "v1.8.1: PCI DSS 2 entries -> 4. Added the ten published SAQs (A, A-EP, B, B-IP, C, C-VT, D Merchant, D Service Provider, P2PE, SPoC) and the existence of Integrating Artificial Intelligence in PCI Assessments Guidelines v1.0, both taken from PCI SSC’s own document library and API. The standards themselves sit behind a licence-acceptance gate that blocks automated retrieval, so SAQ eligibility criteria, RoC thresholds and control detail are deliberately NOT recorded — they cannot yet be read from the primary documents."
+    },
     {
       "date": "2026-08-04",
       "change": "v1.8.0: SEBI CSCRF deepened from 1 entry to 8, every fact read directly from the SEBI circular PDFs. sebi-cscrf-issued is upgraded from FAQ-plus-analyses to the operative extension circular 2025/96 itself. Added: the five RE categories; the requirement that all audits be conducted by a CERT-In empanelled IS auditing organization; VAPT periodicity by NCIIPC designation; VAPT report, closure and revalidation deadlines; the SOC mandate and Market SOC route; Cyber Capability Index applicability; and the 28 August 2025 technical clarifications."
@@ -366,6 +370,32 @@
         "url": "https://blog.pcisecuritystandards.org/now-is-the-time-for-organizations-to-adopt-the-future-dated-requirements-of-pci-dss-v4-x"
       },
       "lastVerified": "2026-08-01"
+    },
+    {
+      "id": "pci-dss-saq-types",
+      "framework": "PCI DSS",
+      "fact": "Ten Self-Assessment Questionnaires are published",
+      "value": "PCI SSC publishes ten SAQs: A, A-EP, B, B-IP, C, C-VT, D for Merchants, D for Service Providers, P2PE and SPoC. A separate “SAQ Instructions and Guidelines” document accompanies them and sets out eligibility for each.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — Document Library",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Enumerated from PCI SSC’s document library. Which SAQ a given entity may use depends on how it handles cardholder data, and validation is ultimately driven by the acquirer or card brand rather than by PCI SSC. The eligibility criteria sit inside the SAQ Instructions document, which is distributed under licence acceptance and cannot be retrieved automatically — so this entry records the set of questionnaires, not the criteria.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-ai-assessment-guidance",
+      "framework": "PCI DSS",
+      "fact": "PCI SSC has published guidance on AI in assessments",
+      "value": "“Integrating Artificial Intelligence in PCI Assessments Guidelines v1.0” is published in the PCI SSC document library, establishing that the Council addresses the use of AI within PCI assessments at version 1.0.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — Document Library",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "This entry records the document’s existence and version, both visible in the document library. Its contents are behind licence acceptance and have not been read, so no substantive requirement is asserted here.",
+      "lastVerified": "2026-08-04"
     },
     {
       "id": "iso-27001-2022-transition",
