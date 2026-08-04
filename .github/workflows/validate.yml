@@ -1,0 +1,49 @@
+name: validate registry
+
+# The registry's credibility rests on every entry carrying a primary source and
+# a stable id. These are exactly the properties a careless edit breaks quietly,
+# so they are enforced on every change rather than trusted to review.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install --no-save ajv@8 ajv-formats@3
+      - name: validate against schema
+        run: |
+          node -e '
+          // the registry schema declares draft 2020-12, which ajv exposes from a separate entry point
+          const Ajv = require("ajv/dist/2020"), addFormats = require("ajv-formats");
+          const fs = require("fs");
+          const schema = JSON.parse(fs.readFileSync("schema.json", "utf8"));
+          const data = JSON.parse(fs.readFileSync("registry.json", "utf8"));
+          const ajv = new Ajv({ allErrors: true, strict: false });
+          addFormats(ajv);
+          if (!ajv.validate(schema, data)) {
+            console.error("registry.json does not match schema.json:");
+            for (const e of ajv.errors) console.error(`  ${e.instancePath || "/"} ${e.message}`);
+            process.exit(1);
+          }
+          const ids = data.entries.map(e => e.id);
+          const dupes = ids.filter((id, i) => ids.indexOf(id) !== i);
+          if (dupes.length) {
+            console.error("duplicate ids (these are cited by third parties and must be unique):");
+            console.error("  " + [...new Set(dupes)].join(", "));
+            process.exit(1);
+          }
+          const unsourced = data.entries.filter(e => !e.source?.url?.startsWith("https://"));
+          if (unsourced.length) {
+            console.error("entries without an https primary source:");
+            unsourced.forEach(e => console.error("  " + e.id));
+            process.exit(1);
+          }
+          console.log(`OK — ${data.entries.length} entries, ${new Set(data.entries.map(e => e.framework)).size} frameworks, all sourced`);
+          '

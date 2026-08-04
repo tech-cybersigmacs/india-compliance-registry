@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cybersigmacs.com/compliance-registry.schema.json",
+  "title": "India Compliance Registry",
+  "description": "Machine-readable schema for the registry. Consumers can validate a copy before relying on it; contributors get told what is wrong before a maintainer has to.",
+  "type": "object",
+  "required": [
+    "name",
+    "version",
+    "updated",
+    "license",
+    "attribution",
+    "entries"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "license": {
+      "type": "string"
+    },
+    "attribution": {
+      "type": "string"
+    },
+    "changelog": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "date",
+          "change"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "change": {
+            "type": "string",
+            "minLength": 5
+          }
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "framework",
+        "fact",
+        "value",
+        "source",
+        "lastVerified"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "Stable slug. Never reuse an id for a different fact — third parties cite these."
+        },
+        "framework": {
+          "type": "string",
+          "minLength": 2
+        },
+        "fact": {
+          "type": "string",
+          "minLength": 2
+        },
+        "value": {
+          "type": "string",
+          "minLength": 10,
+          "description": "The statement itself. Specific enough to be checked against the source without further reading."
+        },
+        "effective": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$",
+          "description": "When the obligation begins. YYYY-MM or YYYY are permitted where a rule is phased to a month or year rather than a day; null where the fact carries no commencement date (e.g. a standard version number)."
+        },
+        "lastVerified": {
+          "type": "string",
+          "format": "date",
+          "description": "The date a human last opened the source and confirmed the value. Not the date the file was edited."
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "url"
+          ],
+          "description": "A primary source only — the issuing body's own publication. Secondary coverage is not admissible.",
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 3
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "pattern": "^https://"
+            }
+          }
+        },
+        "note": {
+          "type": "string",
+          "description": "Caveat a reader needs in order to judge the entry - e.g. that the issuing portal blocks automated retrieval."
+        }
+      }
+    }
+  }
+}
