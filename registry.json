@@ -1,10 +1,14 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "updated": "2026-08-04",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-08-04",
+      "change": "v1.11.0: PCI DSS 12 entries -> 20. SAQ eligibility criteria added for all nine merchant SAQs plus SAQ D for Service Providers, read from the SAQ Instructions and Guidelines v4.0.1 r1 (April 2025) and the individual v4.0.1 SAQs. Notably, revision r1 of April 2025 ADDED two e-commerce eligibility criteria to SAQ A — payment-page elements must originate only and directly from a compliant third party, and the merchant must confirm its site is not susceptible to script-based attacks — so a merchant that qualified for SAQ A before April 2025 may no longer qualify. Also recorded: SAQs are assessed per payment channel; only SAQ A and A-EP cover e-commerce; and every SAQ except SAQ D for Service Providers excludes service providers."
+    },
     {
       "date": "2026-08-04",
       "change": "v1.10.0: the five ungated frameworks deepened from 1 entry each to 5, 4, 3, 4 and 3. NIST CSF: six Functions, Core size of 22 Categories and 106 Subcategories counted from the identifiers in NIST CSWP 29, the four Tiers quoted verbatim, and the outcomes-not-controls point that explains why the CSF is not certifiable. EU AI Act: the Article 113 staggered application dates (general application began 2 August 2026), the three Article 99 penalty tiers, and the Article 111 transitional deadlines running to 31 December 2030. GDPR: the Article 33 72-hour breach notification and both Article 83 fine tiers. HIPAA: the 60-calendar-day individual notice, the 500-individual threshold for reporting to the Secretary, and the three classes of Security Rule safeguard, all from the eCFR text current as of 31 July 2026. OWASP ASVS: 345 requirements across 17 chapters and the L1/L2/L3 split, computed from the 5.0.0 requirement set."
@@ -533,6 +537,110 @@
         "url": "https://www.pcisecuritystandards.org/documents/PCI_DSS_V2.0_Best_Practices_for_Maintaining_PCI_DSS_Compliance.pdf"
       },
       "note": "Section 3.6.7. This supplement is written against PCI DSS v3.2.1 and states so; the retention recommendation is guidance rather than a numbered v4.x requirement. Where an entity forbids its QSA from retaining evidence, PCI SSC expects a formal agreement allocating retention responsibility.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-saq-a-eligibility",
+      "framework": "PCI DSS",
+      "fact": "SAQ A: card-not-present with all account data functions fully outsourced",
+      "value": "SAQ A covers e-commerce or mail/telephone-order merchants who outsource all processing of account data to PCI DSS compliant third parties, store, process and transmit no account data electronically on their own systems or premises, have confirmed those third parties are compliant for the services used, and retain any account data only on paper not received electronically. E-commerce merchants must additionally confirm that every element of the payment page delivered to the customer’s browser originates only and directly from a compliant third-party processor, and that their site is not susceptible to script-based attacks affecting their e-commerce systems. SAQ A does not apply to face-to-face channels or to service providers.",
+      "effective": "2025-04",
+      "source": {
+        "label": "PCI SSC — SAQ Instructions and Guidelines, v4.0.1 r1 (April 2025)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "The two e-commerce criteria were ADDED by revision r1 in April 2025 — the document’s revision history records them as new eligibility criteria, not a clarification. A merchant that qualified for SAQ A before April 2025 may no longer qualify. Read directly from the document named above. PCI SSC distributes it under a licence acceptance that blocks automated retrieval, so the citation points at the document library.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-saq-a-ep-eligibility",
+      "framework": "PCI DSS",
+      "fact": "SAQ A-EP: partially outsourced e-commerce where the merchant site affects payment security",
+      "value": "SAQ A-EP covers e-commerce merchants whose website does not itself receive account data but does affect the security of the transaction or the integrity of the page accepting the customer’s account data — typically by controlling how customers or their data are redirected to a compliant processor. Each element of the payment page must originate from either the merchant’s website or a compliant third party. Where the site is hosted by a third party, that provider must meet all applicable requirements including PCI DSS Appendix A for multi-tenant hosting. The SAQ applies only to e-commerce and not to service providers.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — SAQ Instructions and Guidelines, v4.0.1 r1 (April 2025)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "For SAQ A-EP the requirements that refer to the cardholder data environment apply to the merchant website itself, because the site directly affects how account data is transmitted even though it never receives that data. Read directly from the document named above. PCI SSC distributes it under a licence acceptance that blocks automated retrieval, so the citation points at the document library.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-saq-b-eligibility",
+      "framework": "PCI DSS",
+      "fact": "SAQ B and B-IP: standalone terminals with no electronic account data storage",
+      "value": "SAQ B covers merchants processing account data only through imprint machines or standalone dial-out terminals connected by phone line, not connected to the Internet or to other systems. SAQ B-IP covers merchants using only standalone, PCI-listed approved PTS point-of-interaction devices connected by IP directly to the payment processor, isolated from other systems, where the device does not rely on any other computer, phone or tablet to reach the processor. Neither SAQ permits electronic storage of account data, applies to e-commerce, or applies to service providers.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — SAQ Instructions and Guidelines, v4.0.1 r1 (April 2025)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Secure Card Readers (SCR) and Secure Card Readers for PIN (SCRP) are explicitly excluded from SAQ B-IP — merchants using them are not eligible. A merchant on an expired PTS POI device should check acceptability with its acquirer or the payment brands. Read directly from the document named above. PCI SSC distributes it under a licence acceptance that blocks automated retrieval, so the citation points at the document library.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-saq-c-eligibility",
+      "framework": "PCI DSS",
+      "fact": "SAQ C and C-VT: internet-connected payment applications and virtual terminals",
+      "value": "SAQ C covers merchants with a payment application system such as a POS on the same device or LAN as an Internet connection, isolated from all other systems, where the POS location is not connected to other premises and any LAN serves a single store only. SAQ C-VT covers merchants whose only processing is manual, single-transaction keyboard entry into a third-party hosted virtual payment terminal, accessed from an isolated computing device in a single location with no card readers attached and no software that stores account data. Neither stores account data electronically, applies to e-commerce, or applies to service providers.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — SAQ Instructions and Guidelines, v4.0.1 r1 (April 2025)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Isolation in both SAQs may be achieved by network segmentation, and does not prevent the permitted system type from transmitting transaction data onward to an acquirer or processor. Read directly from the document named above. PCI SSC distributes it under a licence acceptance that blocks automated retrieval, so the citation points at the document library.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-saq-p2pe-eligibility",
+      "framework": "PCI DSS",
+      "fact": "SAQ P2PE: all processing through a validated PCI-listed P2PE solution",
+      "value": "SAQ P2PE covers merchants whose payment processing runs entirely through payment terminals belonging to a validated, PCI-listed point-to-point encryption solution, where those terminals are the only systems that store, process or transmit account data, the merchant has no access to clear-text account data on any computer system, and the merchant has implemented all controls in the P2PE Instruction Manual supplied by the solution provider. It does not apply to e-commerce or to service providers.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — SAQ Instructions and Guidelines, v4.0.1 r1 (April 2025)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Solutions appearing on the PCI list of Point-to-Point Solutions with Expired Validations are no longer “validated”; a merchant on an expired solution should confirm acceptability with its acquirer or the payment brands. A mail/telephone-order merchant keying data from paper or a call directly into such a terminal can qualify. Read directly from the document named above. PCI SSC distributes it under a licence acceptance that blocks automated retrieval, so the citation points at the document library.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-saq-spoc-eligibility",
+      "framework": "PCI DSS",
+      "fact": "SAQ SPoC: SCRP device plus COTS phone or tablet in a validated SPoC solution",
+      "value": "SAQ SPoC covers merchants processing card-present transactions only through a PCI-listed approved PTS Secure Card Reader-PIN device together with a commercial off-the-shelf mobile device, as part of a validated PCI-listed Software-based PIN Entry on COTS solution, with no access to clear-text account data on any computer system. The COTS device is general purpose — it need not be dedicated to payments.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — SAQ Instructions and Guidelines, v4.0.1 r1 (April 2025)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Merchants using non-PTS-listed magnetic stripe readers are not eligible. The SAQ may be used for PTS-listed SCRPs that include magnetic stripe reader functionality. Read directly from the document named above. PCI SSC distributes it under a licence acceptance that blocks automated retrieval, so the citation points at the document library.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-saq-d-scope",
+      "framework": "PCI DSS",
+      "fact": "SAQ D is the catch-all for everyone the other SAQs do not fit",
+      "value": "SAQ D for Merchants applies to any SAQ-eligible merchant that does not meet the criteria for another SAQ type — including e-commerce merchants who accept account data on their own website, merchants who store account data electronically, and merchants who would otherwise fit a narrower SAQ but have additional PCI DSS requirements applicable to their environment. SAQ D for Service Providers applies to all service providers a payment brand has deemed eligible to self-assess.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — SAQ Instructions and Guidelines, v4.0.1 r1 (April 2025)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Under PCI DSS v4.x, SAQ D for Service Providers requires additional documentation in Section 2a and requires the service provider to describe results for each requirement rather than simply answer. Read directly from the document named above. PCI SSC distributes it under a licence acceptance that blocks automated retrieval, so the citation points at the document library.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-saq-channel-rules",
+      "framework": "PCI DSS",
+      "fact": "SAQs are assessed per payment channel, and most exclude e-commerce and service providers",
+      "value": "Each SAQ states that the merchant confirms eligibility “for this payment channel”, so a merchant running several channels may need to validate them separately. Of the nine merchant SAQs, only SAQ A and SAQ A-EP cover e-commerce; B, B-IP, C, C-VT, P2PE and SPoC each state they are not applicable to e-commerce channels. Every SAQ except SAQ D for Service Providers states it is not applicable to service providers. In all cases the entity must also meet whatever validation its acquirer or the payment brands require — PCI SSC does not set that.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — SAQ Instructions and Guidelines, v4.0.1 r1 (April 2025)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "This channel-by-channel framing is the most commonly missed point in scoping conversations: qualifying for a narrow SAQ on one channel says nothing about the others. Read directly from the document named above. PCI SSC distributes it under a licence acceptance that blocks automated retrieval, so the citation points at the document library.",
       "lastVerified": "2026-08-04"
     },
     {
