@@ -1,10 +1,14 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.8.1",
+  "version": "1.9.0",
   "updated": "2026-08-04",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-08-04",
+      "change": "v1.9.0: PCI DSS 4 entries -> 12, from four PCI SSC documents read in full: the v4.x ROC Template FAQs (rev 1, Dec 2022), the v4.0 DESV Supplemental ROC Template (rev 1, Dec 2022), the v4.x Targeted Risk Analysis Guidance (Nov 2023) and Best Practices for Maintaining PCI DSS Compliance v2.0 (Jan 2019). Added the two assessment approaches and the compensating-control boundary; the four per-requirement findings; the three overall results plus full/partial scope; ROC Template mandatory use and personalisation limits; both kinds of targeted risk analysis; PCI SSC’s suggested TRA frequencies for nine requirements; DESV applicability and cadences; and the three-year evidence-retention recommendation. Three of the four documents sit behind PCI SSC’s licence gate, so they are cited by exact title, revision and date against the document library."
+    },
     {
       "date": "2026-08-04",
       "change": "v1.8.1: PCI DSS 2 entries -> 4. Added the ten published SAQs (A, A-EP, B, B-IP, C, C-VT, D Merchant, D Service Provider, P2PE, SPoC) and the existence of Integrating Artificial Intelligence in PCI Assessments Guidelines v1.0, both taken from PCI SSC’s own document library and API. The standards themselves sit behind a licence-acceptance gate that blocks automated retrieval, so SAQ eligibility criteria, RoC thresholds and control detail are deliberately NOT recorded — they cannot yet be read from the primary documents."
@@ -395,6 +399,110 @@
         "url": "https://www.pcisecuritystandards.org/document_library/"
       },
       "note": "This entry records the document’s existence and version, both visible in the document library. Its contents are behind licence acceptance and have not been read, so no substantive requirement is asserted here.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-assessment-approaches",
+      "framework": "PCI DSS",
+      "fact": "Two approaches to implementing and validating requirements",
+      "value": "PCI DSS v4.x allows two approaches. The Defined Approach is the traditional method: the entity implements the stated requirement and the assessor follows the defined testing procedures. The Customized Approach, new in v4.x, lets an entity meet a requirement’s Customized Approach Objective by other means, supporting innovation in security practice. Compensating controls are available only under the defined approach, and only where a legitimate, documented technical or business constraint prevents meeting the requirement as stated; they must be documented annually, reviewed and validated by the assessor, and submitted with the ROC.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — PCI DSS v4.x ROC Template FAQs, Revision 1 (December 2022)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Section 1.2. The document states plainly: “Compensating Controls are not an option for the Customized Approach.” Read directly from the PCI SSC document named above. PCI SSC distributes its documents under a licence acceptance that blocks automated retrieval, so the citation points at the document library rather than a direct file URL.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-assessment-findings",
+      "framework": "PCI DSS",
+      "fact": "Four possible findings per requirement",
+      "value": "Each individual PCI DSS requirement is reported as exactly one of: In Place, Not Applicable, Not Tested, or Not in Place. Not Applicable requires the assessor to render an opinion and to report the testing performed to confirm non-applicability. Not Tested means the requirement was excluded from consideration entirely — the assessor follows the entity’s instruction and renders no opinion — and any use of Not Tested makes the engagement a Partial Assessment.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — PCI DSS v4.x ROC Template FAQs, Revision 1 (December 2022)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Sections 2.2, 2.3, 4.1 and 4.2. “In Place with Remediation” existed in the original v4.0 ROC Template and was removed by Revision 1, so it is not a valid finding. Read directly from the PCI SSC document named above. PCI SSC distributes its documents under a licence acceptance that blocks automated retrieval, so the citation points at the document library rather than a direct file URL.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-overall-assessment-result",
+      "framework": "PCI DSS",
+      "fact": "Three possible overall results, plus full or partial scope",
+      "value": "The ROC records an Overall Assessment Result of Compliant, Compliant but with Legal Exception, or Non-Compliant. Separately it records whether a Full or Partial Assessment was performed: Full means every requirement was assessed and none marked Not Tested; Partial means one or more were marked Not Tested. “Compliant but with Legal Exception” applies where a statutory law or regulation prohibits meeting a requirement — the assessor must confirm such a law exists, and contractual obligations or legal advice do not qualify.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — PCI DSS v4.x ROC Template FAQs, Revision 1 (December 2022)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Sections 2.1, 2.3 and 4.1. Read directly from the PCI SSC document named above. PCI SSC distributes its documents under a licence acceptance that blocks automated retrieval, so the citation points at the document library rather than a direct file URL.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-roc-template-mandatory",
+      "framework": "PCI DSS",
+      "fact": "The ROC Template is mandatory for QSAs, with strict limits on personalisation",
+      "value": "The PCI DSS ROC Template is mandatory for QSAs reporting a PCI DSS assessment, and every response section must be completed even where requirements are not applicable. QSAs may add company logos and legal wording to the customisable title page, change page headers, add table rows, and delete the ROC Template Instructions before issuing the report. They may not edit footers, change the format, reorder or remove sections or requirements, or remove any content from Parts I and II.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — PCI DSS v4.x ROC Template FAQs, Revision 1 (December 2022)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Sections 5.1 and 5.4. The current unlocked Word version is distributed to assessors through the Assessor Portal at programs.pcissc.org. Accepting payment brands or acquirers may reject a report whose template changes they consider unacceptable. Read directly from the PCI SSC document named above. PCI SSC distributes its documents under a licence acceptance that blocks automated retrieval, so the citation points at the document library rather than a direct file URL.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-targeted-risk-analysis",
+      "framework": "PCI DSS",
+      "fact": "Two kinds of targeted risk analysis, reviewed every 12 months",
+      "value": "PCI DSS v4.0 introduced the targeted risk analysis (TRA). Requirement 12.3.1 covers TRAs that set how frequently a periodic activity is performed; Requirement 12.3.2 covers TRAs supporting any requirement met by the customized approach. A TRA is required only where a requirement explicitly says so. Once prepared, the entity reviews each TRA at least once every 12 months and on changes that could affect risk. A TRA cannot be used to perform an activity LESS often than a requirement states — that is a failure of the requirement, not a risk decision.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — Information Supplement: PCI DSS v4.x Targeted Risk Analysis Guidance (November 2023)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Introduction and FAQs 1, 2, 5 and 6. Performing an activity MORE often than stated needs no TRA. Where a documented technical or business constraint prevents meeting a stated frequency, the route is a compensating control, not a TRA. Read directly from the PCI SSC document named above. PCI SSC distributes its documents under a licence acceptance that blocks automated retrieval, so the citation points at the document library rather than a direct file URL.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-tra-suggested-frequencies",
+      "framework": "PCI DSS",
+      "fact": "PCI SSC’s suggested frequencies for TRA-governed activities",
+      "value": "Nine requirements let the entity set frequency by TRA, and PCI SSC publishes baseline recommendations for each: malware-risk re-evaluation for components deemed not at risk (5.2.3.1) at least every six months; periodic malware scans (5.3.2.1) daily; review of application and system account access (7.2.5.1) every six months; changing application and system account passwords (8.6.3) every three months; POI device inspections (9.5.1.2.1) monthly; log reviews for other system components (10.4.2.1) every seven days; remediation of non-critical vulnerabilities (11.3.1.1) within three months for medium and six months for low; payment-page change- and tamper-detection (11.6.1) every seven days; and incident-response training (12.10.4.1) yearly and at the start of employment.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — Information Supplement: PCI DSS v4.x Targeted Risk Analysis Guidance (November 2023)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Table at the end of the supplement. These are recommendations, not requirements — a TRA is still required to document and justify whichever frequency the entity selects. Read directly from the PCI SSC document named above. PCI SSC distributes its documents under a licence acceptance that blocks automated retrieval, so the citation points at the document library rather than a direct file URL.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-desv",
+      "framework": "PCI DSS",
+      "fact": "Designated Entities Supplemental Validation applies only when a brand or acquirer requires it",
+      "value": "Appendix A3, Designated Entities Supplemental Validation (DESV), is assessed only when an acquirer or payment brand instructs an entity to undergo it. It adds five requirement groups: A3.1 a PCI DSS compliance programme, A3.2 documented and validated scope, A3.3 PCI DSS embedded in business-as-usual, A3.4 controlled logical access, and A3.5 identification of and response to suspicious events. Its cadences are tighter than the annual assessment: scope confirmed and data discovery performed at least every three months, BAU reviews every three months, segmentation penetration testing every six months, and user-account review every six months.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — PCI DSS v4.0 Supplemental ROC Template: DESV, Revision 1 (December 2022)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "note": "Instructions for Submission and Findings sections. Every DESV requirement examined states “This requirement is not eligible for the customized approach,” so DESV must be met as defined, with compensating controls the only flexibility. Read directly from the PCI SSC document named above. PCI SSC distributes its documents under a licence acceptance that blocks automated retrieval, so the citation points at the document library rather than a direct file URL.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "pci-dss-evidence-retention",
+      "framework": "PCI DSS",
+      "fact": "Assessment evidence should be retained for at least three years",
+      "value": "PCI SSC recommends retaining all collected assessment evidence for a minimum of three years, so an organisation can substantiate historic compliance statements and support forensic analysis after a breach. Contractual obligations or local law may require longer. Evidence includes work papers, audit results, interview notes, screenshots and configuration settings, and the retention process should guard against evidence being altered, tampered with or destroyed.",
+      "effective": null,
+      "source": {
+        "label": "PCI SSC — Information Supplement: Best Practices for Maintaining PCI DSS Compliance v2.0 (January 2019)",
+        "url": "https://www.pcisecuritystandards.org/documents/PCI_DSS_V2.0_Best_Practices_for_Maintaining_PCI_DSS_Compliance.pdf"
+      },
+      "note": "Section 3.6.7. This supplement is written against PCI DSS v3.2.1 and states so; the retention recommendation is guidance rather than a numbered v4.x requirement. Where an entity forbids its QSA from retaining evidence, PCI SSC expects a formal agreement allocating retention responsibility.",
       "lastVerified": "2026-08-04"
     },
     {
