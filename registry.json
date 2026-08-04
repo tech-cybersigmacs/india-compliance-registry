@@ -1,10 +1,14 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "updated": "2026-08-04",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-08-04",
+      "change": "v1.10.0: the five ungated frameworks deepened from 1 entry each to 5, 4, 3, 4 and 3. NIST CSF: six Functions, Core size of 22 Categories and 106 Subcategories counted from the identifiers in NIST CSWP 29, the four Tiers quoted verbatim, and the outcomes-not-controls point that explains why the CSF is not certifiable. EU AI Act: the Article 113 staggered application dates (general application began 2 August 2026), the three Article 99 penalty tiers, and the Article 111 transitional deadlines running to 31 December 2030. GDPR: the Article 33 72-hour breach notification and both Article 83 fine tiers. HIPAA: the 60-calendar-day individual notice, the 500-individual threshold for reporting to the Secretary, and the three classes of Security Rule safeguard, all from the eCFR text current as of 31 July 2026. OWASP ASVS: 345 requirements across 17 chapters and the L1/L2/L3 split, computed from the 5.0.0 requirement set."
+    },
     {
       "date": "2026-08-04",
       "change": "v1.9.0: PCI DSS 4 entries -> 12, from four PCI SSC documents read in full: the v4.x ROC Template FAQs (rev 1, Dec 2022), the v4.0 DESV Supplemental ROC Template (rev 1, Dec 2022), the v4.x Targeted Risk Analysis Guidance (Nov 2023) and Best Practices for Maintaining PCI DSS Compliance v2.0 (Jan 2019). Added the two assessment approaches and the compensating-control boundary; the four per-requirement findings; the three overall results plus full/partial scope; ROC Template mandatory use and personalisation limits; both kinds of targeted risk analysis; PCI SSC’s suggested TRA frequencies for nine requirements; DESV applicability and cadences; and the three-year evidence-retention recommendation. Three of the four documents sit behind PCI SSC’s licence gate, so they are cited by exact title, revision and date against the document library."
@@ -232,6 +236,32 @@
         "url": "https://owasp.org/www-project-application-security-verification-standard/"
       },
       "lastVerified": "2026-08-01"
+    },
+    {
+      "id": "owasp-asvs-5-structure",
+      "framework": "OWASP ASVS",
+      "fact": "ASVS 5.0.0 contains 345 requirements across 17 chapters",
+      "value": "Version 5.0.0 of the Application Security Verification Standard sets out 345 verification requirements organised into 17 chapters, covering encoding and sanitization, validation, web frontend security, API and web service, file handling, authentication, session management, authorization, self-contained tokens, OAuth and OIDC, cryptography, secure communication, configuration, data protection, secure coding and architecture, security logging and error handling, and WebRTC.",
+      "effective": null,
+      "source": {
+        "label": "OWASP — Application Security Verification Standard project",
+        "url": "https://owasp.org/www-project-application-security-verification-standard/"
+      },
+      "note": "Counted from the machine-readable ASVS 5.0.0 requirement set published in the OWASP/ASVS repository. No release date is recorded here because that file carries none.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "owasp-asvs-5-levels",
+      "framework": "OWASP ASVS",
+      "fact": "Requirements are split across three verification levels",
+      "value": "ASVS 5.0.0 assigns each requirement to one of three levels. Level 1 carries 70 requirements, Level 2 carries 183, and Level 3 carries 92, totalling 345. The levels are cumulative in practice: an application verified at a higher level is expected to satisfy the lower levels too, so Level 3 verification covers the full set.",
+      "effective": null,
+      "source": {
+        "label": "OWASP — Application Security Verification Standard project",
+        "url": "https://owasp.org/www-project-application-security-verification-standard/"
+      },
+      "note": "Level counts computed from the ASVS 5.0.0 requirement set. Treat the split as the shape of the standard rather than an estimate of effort — Level 1 is deliberately the smallest tier.",
+      "lastVerified": "2026-08-04"
     },
     {
       "id": "dpdp-penalties",
@@ -531,6 +561,58 @@
       "lastVerified": "2026-08-01"
     },
     {
+      "id": "nist-csf-six-functions",
+      "framework": "NIST CSF",
+      "fact": "Six Functions organise the Core",
+      "value": "CSF 2.0 organises cybersecurity outcomes under six Functions: GOVERN (GV), IDENTIFY (ID), PROTECT (PR), DETECT (DE), RESPOND (RS) and RECOVER (RC). GOVERN is new in 2.0 and covers how an organisation establishes and monitors its cybersecurity risk management strategy, expectations and policy.",
+      "effective": "2024-02-26",
+      "source": {
+        "label": "NIST — Cybersecurity Framework (CSF) 2.0, NIST CSWP 29",
+        "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf"
+      },
+      "note": "Function identifiers counted directly in NIST CSWP 29.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "nist-csf-core-size",
+      "framework": "NIST CSF",
+      "fact": "The Core contains 22 Categories and 106 Subcategories",
+      "value": "Beneath the six Functions, the CSF 2.0 Core is organised into 22 Categories and 106 Subcategories. Subcategories state outcomes, not controls, and are the level at which an organisation assesses and communicates its current and target state.",
+      "effective": "2024-02-26",
+      "source": {
+        "label": "NIST — Cybersecurity Framework (CSF) 2.0, NIST CSWP 29",
+        "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf"
+      },
+      "note": "Counted from the unique Category and Subcategory identifiers (for example GV.OC, GV.OC-01) appearing in NIST CSWP 29 itself.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "nist-csf-tiers",
+      "framework": "NIST CSF",
+      "fact": "Four Tiers describe rigour of risk governance",
+      "value": "The framework defines four Tiers, quoted from the document: “Partial (Tier 1), Risk Informed (Tier 2), Repeatable (Tier 3), and Adaptive (Tier 4).” Tiers characterise the rigour of an organisation’s cybersecurity risk governance and management practices; they are not maturity levels and reaching Tier 4 is not a goal for every organisation.",
+      "effective": "2024-02-26",
+      "source": {
+        "label": "NIST — Cybersecurity Framework (CSF) 2.0, NIST CSWP 29",
+        "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf"
+      },
+      "note": "Tier names quoted verbatim from NIST CSWP 29.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "nist-csf-outcomes-not-controls",
+      "framework": "NIST CSF",
+      "fact": "The CSF states outcomes and does not prescribe how to achieve them",
+      "value": "NIST states that the CSF “offers a taxonomy of high-level cybersecurity outcomes that can be used by any organization — regardless of its size, sector, or maturity”, and that it “does not prescribe how outcomes should be achieved”, instead linking to online resources describing practices and controls. This is why the CSF is not certifiable and why an organisation cannot be audited as “CSF compliant” the way it can against ISO/IEC 27001 or PCI DSS.",
+      "effective": "2024-02-26",
+      "source": {
+        "label": "NIST — Cybersecurity Framework (CSF) 2.0, NIST CSWP 29",
+        "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf"
+      },
+      "note": "Quoted from the Abstract of NIST CSWP 29.",
+      "lastVerified": "2026-08-04"
+    },
+    {
       "id": "rbi-it-governance-md",
       "framework": "RBI",
       "fact": "IT Governance Master Direction",
@@ -592,6 +674,45 @@
         "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
       },
       "lastVerified": "2026-08-01"
+    },
+    {
+      "id": "eu-ai-act-application-dates",
+      "framework": "EU AI Act",
+      "fact": "Staggered application under Article 113",
+      "value": "Article 113 provides that the Regulation applies from 2 August 2026, with three exceptions: Chapters I and II (general provisions and prohibited AI practices) applied from 2 February 2025; Chapter III Section 4, Chapter V, Chapter VII, Chapter XII and Article 78 (notifying authorities, general-purpose AI models, governance, penalties and confidentiality) applied from 2 August 2025, with the exception of Article 101; and Article 6(1), covering high-risk classification for AI as a safety component of products already regulated under Union law, applies from 2 August 2027.",
+      "effective": "2026-08-02",
+      "source": {
+        "label": "EUR-Lex — Regulation (EU) 2024/1689 (Artificial Intelligence Act), Official Journal",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689"
+      },
+      "note": "Article 113 read verbatim from the Official Journal text. The Regulation was done at Brussels on 13 June 2024 and entered into force on the twentieth day following publication.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "eu-ai-act-penalties",
+      "framework": "EU AI Act",
+      "fact": "Three penalty tiers under Article 99",
+      "value": "Infringement of the Article 5 prohibited-practices rules is subject to administrative fines of up to EUR 35 000 000 or 7 % of total worldwide annual turnover for the preceding financial year, whichever is higher. Breach of most other operator obligations attracts up to EUR 15 000 000 or 3 %. Supplying incorrect, incomplete or misleading information to notified bodies or national authorities attracts up to EUR 7 500 000 or 1 %. For SMEs including start-ups, each ceiling is the lower rather than the higher of the two figures.",
+      "effective": "2025-08-02",
+      "source": {
+        "label": "EUR-Lex — Regulation (EU) 2024/1689 (Artificial Intelligence Act), Official Journal",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689"
+      },
+      "note": "Article 99. Penalties applied from 2 August 2025 under Article 113(b); Member States set the detailed rules and notify the Commission.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "eu-ai-act-legacy-transitions",
+      "framework": "EU AI Act",
+      "fact": "Transitional deadlines for systems already on the market",
+      "value": "Article 111 gives longer runways to AI already in service. Providers of general-purpose AI models placed on the market before 2 August 2025 must comply by 2 August 2027. High-risk systems placed on the market before 2 August 2026 are caught only if subject to significant design changes after that date — but providers and deployers of high-risk systems intended for use by public authorities must comply by 2 August 2030 regardless. AI systems that are components of the large-scale IT systems listed in Annex X and placed on the market before 2 August 2027 must be brought into compliance by 31 December 2030.",
+      "effective": "2026-08-02",
+      "source": {
+        "label": "EUR-Lex — Regulation (EU) 2024/1689 (Artificial Intelligence Act), Official Journal",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689"
+      },
+      "note": "Article 111 read verbatim. These transitions are the reason an organisation can be lawfully operating non-conforming AI today and still face a hard compliance date.",
+      "lastVerified": "2026-08-04"
     },
     {
       "id": "sama-csf",
@@ -719,6 +840,32 @@
       "lastVerified": "2026-08-01"
     },
     {
+      "id": "gdpr-breach-notification",
+      "framework": "GDPR",
+      "fact": "Breach notification to the supervisory authority within 72 hours",
+      "value": "A controller must notify a personal data breach to the supervisory authority without undue delay and, where feasible, not later than 72 hours after having become aware of it, unless the breach is unlikely to result in a risk to the rights and freedoms of natural persons. Where notification is not made within 72 hours it must be accompanied by reasons for the delay.",
+      "effective": "2018-05-25",
+      "source": {
+        "label": "EUR-Lex — Regulation (EU) 2016/679 (GDPR), consolidated text",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679"
+      },
+      "note": "Article 33, with Recital 85. The 72 hours runs from awareness of the breach, not from its occurrence, and the obligation is qualified by “where feasible” — it is not an absolute deadline.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "gdpr-fine-tiers",
+      "framework": "GDPR",
+      "fact": "Two tiers of administrative fine under Article 83",
+      "value": "The lower tier is up to 10 000 000 EUR or, for an undertaking, up to 2 % of total worldwide annual turnover of the preceding financial year, whichever is higher — covering obligations of controllers and processors such as security of processing, records and breach notification. The higher tier is up to 20 000 000 EUR or 4 % of total worldwide annual turnover, whichever is higher — covering the basic principles for processing, conditions for consent, data-subject rights, and transfers to third countries.",
+      "effective": "2018-05-25",
+      "source": {
+        "label": "EUR-Lex — Regulation (EU) 2016/679 (GDPR), consolidated text",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679"
+      },
+      "note": "Article 83(4) and 83(5). “Undertaking” is read in the competition-law sense, so turnover can be assessed across a corporate group rather than the single legal entity fined.",
+      "lastVerified": "2026-08-04"
+    },
+    {
       "id": "dpdp-notice-requirements",
       "framework": "DPDP Act 2023",
       "fact": "Notice contents (section 5)",
@@ -742,6 +889,45 @@
         "url": "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
       },
       "lastVerified": "2026-08-01"
+    },
+    {
+      "id": "hipaa-breach-individual-notice",
+      "framework": "HIPAA (US)",
+      "fact": "Individuals notified within 60 calendar days of discovery",
+      "value": "Following discovery of a breach of unsecured protected health information, a covered entity must notify each affected individual “without unreasonable delay and in no case later than 60 calendar days after discovery of a breach”, except where a law-enforcement delay under § 164.412 applies.",
+      "effective": null,
+      "source": {
+        "label": "eCFR — 45 CFR Part 164 (HIPAA Security and Breach Notification Rules)",
+        "url": "https://www.ecfr.gov/current/title-45/part-164"
+      },
+      "note": "45 CFR § 164.404(b), quoted verbatim from the eCFR text current as of 31 July 2026. Sixty days is the outer limit, not the standard — unreasonable delay inside that window is itself a violation.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "hipaa-breach-secretary-notice",
+      "framework": "HIPAA (US)",
+      "fact": "Reporting to the Secretary depends on breach size",
+      "value": "For breaches of unsecured protected health information involving 500 or more individuals, the covered entity must notify the Secretary contemporaneously with the notice to individuals, in the manner specified on the HHS website. For breaches involving fewer than 500 individuals, the entity maintains a log and reports them not later than 60 days after the end of the calendar year in which they were discovered.",
+      "effective": null,
+      "source": {
+        "label": "eCFR — 45 CFR Part 164 (HIPAA Security and Breach Notification Rules)",
+        "url": "https://www.ecfr.gov/current/title-45/part-164"
+      },
+      "note": "45 CFR § 164.408(b) and (c). The 500-individual threshold also determines whether a breach appears on the HHS public breach portal.",
+      "lastVerified": "2026-08-04"
+    },
+    {
+      "id": "hipaa-security-safeguards",
+      "framework": "HIPAA (US)",
+      "fact": "The Security Rule is built on three classes of safeguard",
+      "value": "The Security Rule requires administrative, physical and technical safeguards for electronic protected health information. Administrative safeguards are “administrative actions, and policies and procedures, to manage the selection, development, implementation, and maintenance of security measures”. Physical safeguards are physical measures, policies and procedures protecting information systems and related buildings and equipment. Technical safeguards are the technology and the policy and procedures for its use that protect ePHI and control access to it.",
+      "effective": null,
+      "source": {
+        "label": "eCFR — 45 CFR Part 164 (HIPAA Security and Breach Notification Rules)",
+        "url": "https://www.ecfr.gov/current/title-45/part-164"
+      },
+      "note": "45 CFR § 164.304 definitions, quoted from the eCFR text current as of 31 July 2026.",
+      "lastVerified": "2026-08-04"
     },
     {
       "id": "iso-22301-2019",
