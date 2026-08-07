@@ -1,10 +1,14 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.12.0",
-  "updated": "2026-08-04",
+  "version": "1.13.0",
+  "updated": "2026-08-07",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-08-07",
+      "change": "v1.13.0: CKYC (CERSAI) added — 5 entries read from the RBI Master Direction on KYC, 2016 (updated 14 August 2025). Covers CERSAI’s designation as the Central KYC Records Registry by Gazette Notification S.O. 3183(E) of 26 November 2015, the Rule 9(1A) ten-day upload obligation, the phased applicability from the 15 July 2016 live run through to Legal Entity accounts opened on or after 1 April 2021, the Individuals and Legal Entities templates CERSAI revises, and the KYC Identifier download-with-consent mechanism. Added because clients are asking for the service, not because search demand was measurable — with no prior CKYC content the site could not appear for those queries at all."
+    },
     {
       "date": "2026-08-05",
       "change": "v1.12.0: SWIFT CSP 1 entry -> 7, read from the Customer Security Controls Framework v2026 Detailed Description (1 July 2025). Added the 32-control structure (26 mandatory, 6 advisory, verified both from the stated figure and by counting control identifiers); the KYC-SA attestation window of July to December 2026 against v2026; the five reference architecture types; and the two structural v2026 changes — control 2.4 Back Office Data Flow Security becoming mandatory under the Appendix H phased approach with legacy flows advisory until a tentative 2028, and customer client connectors becoming mandatory in scope for fourteen controls, which moves some users from architecture type B to A4."
@@ -965,6 +969,71 @@
       },
       "note": "Swift states that at publication there is no specific guidance on using AI-based tools to support CSP controls, and that the same care applies to any tool handling the confidentiality, integrity and availability of processed data. Alliance Access Integration Platform (IPLA) and Swift Integration Layer (SIL) are expected to reach end of life in 2026 but remain in scope until then. Read directly from the document named above. The Swift CSP Document Centre sits behind myswift authentication, so the citation points at the document centre rather than a file URL.",
       "lastVerified": "2026-08-05"
+    },
+    {
+      "id": "ckyc-registry-designation",
+      "framework": "CKYC (CERSAI)",
+      "fact": "CERSAI operates the Central KYC Records Registry",
+      "value": "The Master Direction defines the Central KYC Records Registry (CKYCR) as “an entity defined under Rule 2(1) of the Rules, to receive, store, safeguard and retrieve the KYC records in digital form of a customer”. The Central Registry of Securitisation Asset Reconstruction and Security Interest of India (CERSAI) was authorised to act as and perform the functions of the CKYCR by Gazette Notification No. S.O. 3183(E) dated 26 November 2015.",
+      "effective": "2015-11-26",
+      "source": {
+        "label": "RBI — Master Direction, Know Your Customer (KYC) Direction, 2016 (updated 14 August 2025)",
+        "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=11566"
+      },
+      "note": "“the Rules” means the Prevention of Money-Laundering (Maintenance of Records) Rules, 2005.",
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "ckyc-upload-ten-days",
+      "framework": "CKYC (CERSAI)",
+      "fact": "KYC records must reach the CKYCR within 10 days",
+      "value": "Under Rule 9(1A) of the PML Rules, regulated entities shall capture the customer’s KYC records and upload them onto the CKYCR within 10 days of commencement of an account-based relationship with the customer.",
+      "effective": null,
+      "source": {
+        "label": "RBI — Master Direction, Know Your Customer (KYC) Direction, 2016 (updated 14 August 2025)",
+        "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=11566"
+      },
+      "note": "The ten days run from commencement of the relationship, not from when the record is judged complete — so a submission rejected on a template error still consumes the window.",
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "ckyc-phased-applicability",
+      "framework": "CKYC (CERSAI)",
+      "fact": "Applicability was phased between 2016 and 2021",
+      "value": "The CKYCR live run began on 15 July 2016, phased, starting with new individual accounts. Scheduled Commercial Banks were required to upload KYC data for all new individual accounts opened on or after 1 January 2017 (with an initial allowance to 1 February 2017 for accounts opened during January 2017). Regulated entities other than SCBs were required to start uploading for new individual accounts opened on or after 1 April 2017. KYC records for accounts of Legal Entities opened on or after 1 April 2021 must also be uploaded.",
+      "effective": "2021-04-01",
+      "source": {
+        "label": "RBI — Master Direction, Know Your Customer (KYC) Direction, 2016 (updated 14 August 2025)",
+        "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=11566"
+      },
+      "note": "The Legal Entity obligation is the most recently added and the one most often missing from older CKYC programmes built around individual onboarding.",
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "ckyc-templates",
+      "framework": "CKYC (CERSAI)",
+      "fact": "Submissions use CERSAI templates that change over time",
+      "value": "Regulated entities capture KYC information for sharing with the CKYCR as per the KYC templates prepared for “Individuals” and “Legal Entities”, and those templates may be revised from time to time as released by CERSAI. Operational Guidelines for uploading KYC data are published by CERSAI.",
+      "effective": null,
+      "source": {
+        "label": "RBI — Master Direction, Know Your Customer (KYC) Direction, 2016 (updated 14 August 2025)",
+        "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=11566"
+      },
+      "note": "Because the templates are revised, a validation performed against an older template version is not evidence that current submissions conform.",
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "ckyc-identifier",
+      "framework": "CKYC (CERSAI)",
+      "fact": "The KYC Identifier lets one entity retrieve another’s KYC record",
+      "value": "A customer may satisfy identification by submitting the KYC Identifier together with explicit consent for the regulated entity to download records from the CKYCR, instead of resubmitting officially valid documents. CERSAI asks regulated entities to display the KYC Identifier to customers on passbooks, account statements, mobile and internet banking, insurance policies and demat statements.",
+      "effective": null,
+      "source": {
+        "label": "RBI — Master Direction, Know Your Customer (KYC) Direction, 2016 (updated 14 August 2025)",
+        "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=11566"
+      },
+      "note": "The consent is the control that matters: a download without recorded, retrievable customer consent is an access to third-party personal data with no lawful basis to show an examiner.",
+      "lastVerified": "2026-08-07"
     },
     {
       "id": "qatar-nia",
