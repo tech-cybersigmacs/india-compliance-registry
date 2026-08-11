@@ -1,10 +1,14 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.22.0",
-  "updated": "2026-08-07",
+  "version": "1.22.1",
+  "updated": "2026-08-11",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-08-11",
+      "change": "v1.22.1: weekly health remediation. All 14 flagged sources opened in a real browser: 13 confirmed present and re-verified (including the UIDAI AUA/KUA PDF, which the automated check had reported dead - the WAF serves bots HTML but browsers get the PDF). One source genuinely dead: NPCI removed the OC 97 direct PDF; that entry now cites the official UPI circulars listing with the withdrawal noted, matching the sibling entry's treatment. Also fixed: the public GitHub dataset mirror had drifted nine versions behind the site (1.13.0 vs 1.22.0) - synced, and the website deploy now pushes the mirror automatically on version change."
+    },
     {
       "date": "2026-08-08",
       "change": "v1.22.0: recorded ISO/IEC 27001:2022 bibliographic identity (third edition, October 2022). Content deliberately NOT recorded: the copy available was watermarked as licensed to another organisation and the standard forbids reproduction without permission, so Annex A control counts, clause structure and requirement text are excluded until a copy licensed to CyberSigma is available. The cluster stays thin rather than being filled from material we are not licensed to use."
@@ -247,7 +251,7 @@
         "url": "https://uidai.gov.in/images/Compliance_checklist_for_certifying_compliance_with_controls__that_the_AUAKUA_is_required_to_have_in_place.pdf"
       },
       "note": "Aadhaar (Authentication and Offline Verification) Amendment Regulations were made in 2025, with further UIDAI updates in January 2026 (including a revised pre-onboarding AUA/KUA checklist). uidai.gov.in 307-redirects deep links to a single-page app, so the amendment text could not be retrieved automatically and its effect on the audit obligation is UNVERIFIED here - check the current regulation before relying on this entry for scoping.",
-      "lastVerified": "2026-08-07"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "isnp-audit",
@@ -699,7 +703,7 @@
         "url": "https://www.iso.org/standard/27001"
       },
       "note": "Deadline corroborated across accredited certification bodies (BSI, SGS, LRQA); iso.org blocks automated verification.",
-      "lastVerified": "2026-08-01"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "nist-csf-2",
@@ -802,7 +806,7 @@
         "url": "https://www.iso.org/standard/42001"
       },
       "note": "iso.org blocks automated verification; publication corroborated across accredited bodies and major assurance firms.",
-      "lastVerified": "2026-08-01"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "eu-ai-act-dates",
@@ -917,7 +921,7 @@
         "url": "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws"
       },
       "note": "OPEN QUESTION - do not treat as settled. Multiple secondary sources report that the Executive Regulations to Federal Decree-Law 45/2021 have been issued, which would activate full enforcement, but they conflict on the instrument and date (one cites Cabinet Decision No. 33 of 2024, others simply say 2026) and none cite a Cabinet Decision number against a primary UAE government source. Not recorded as fact until confirmed from the official gazette or the UAE Data Office.",
-      "lastVerified": "2026-08-07"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "swift-csp",
@@ -929,7 +933,7 @@
         "label": "SWIFT — Customer Security Programme (official)",
         "url": "https://www.swift.com/myswift/customer-security-programme"
       },
-      "lastVerified": "2026-08-01"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "swift-cscf-v2026-structure",
@@ -942,7 +946,7 @@
         "url": "https://www.swift.com/myswift/customer-security-programme-document-centre"
       },
       "note": "The 26/6 split is stated in the document and independently confirmed by counting control identifiers: 32 unique IDs, of which 6 carry the A suffix denoting advisory. Read directly from the document named above. The Swift CSP Document Centre sits behind myswift authentication, so the citation points at the document centre rather than a file URL.",
-      "lastVerified": "2026-08-05"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "swift-cscf-attestation-window",
@@ -955,7 +959,7 @@
         "url": "https://www.swift.com/myswift/customer-security-programme-document-centre"
       },
       "note": "The v2026 attestation window is therefore open now and closes at the end of December 2026. Users control their own attestation data and may grant counterparties access to view it, which is what makes a weak attestation a commercial problem and not only a compliance one. Read directly from the document named above. The Swift CSP Document Centre sits behind myswift authentication, so the citation points at the document centre rather than a file URL.",
-      "lastVerified": "2026-08-05"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "swift-cscf-architecture-types",
@@ -968,7 +972,7 @@
         "url": "https://www.swift.com/myswift/customer-security-programme-document-centre"
       },
       "note": "Users owning only a communication interface and no messaging interface still fall under A1. Read directly from the document named above. The Swift CSP Document Centre sits behind myswift authentication, so the citation points at the document centre rather than a file URL.",
-      "lastVerified": "2026-08-05"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "swift-cscf-v2026-control-2-4-mandatory",
@@ -981,7 +985,7 @@
         "url": "https://www.swift.com/myswift/customer-security-programme-document-centre"
       },
       "note": "Security of the legacy direct exchanges — between back-office first hops and bridging servers, or between first hops and the secure zone — remains advisory, with 2028 given as the tentative date for making those flows mandatory and completing control 2.4’s journey. Read directly from the document named above. The Swift CSP Document Centre sits behind myswift authentication, so the citation points at the document centre rather than a file URL.",
-      "lastVerified": "2026-08-05"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "swift-cscf-v2026-customer-client-connectors",
@@ -994,7 +998,7 @@
         "url": "https://www.swift.com/myswift/customer-security-programme-document-centre"
       },
       "note": "The document states the consequence plainly: this change “requires some users who previously attested as Architecture type B, to attest as A4 when using a customer client connector.” Architecture B is the narrowest scope and A4 is materially wider, so affected users face a larger assessment this cycle. Read directly from the document named above. The Swift CSP Document Centre sits behind myswift authentication, so the citation points at the document centre rather than a file URL.",
-      "lastVerified": "2026-08-05"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "swift-cscf-v2026-other-changes",
@@ -1007,7 +1011,7 @@
         "url": "https://www.swift.com/myswift/customer-security-programme-document-centre"
       },
       "note": "Swift states that at publication there is no specific guidance on using AI-based tools to support CSP controls, and that the same care applies to any tool handling the confidentiality, integrity and availability of processed data. Alliance Access Integration Platform (IPLA) and Swift Integration Layer (SIL) are expected to reach end of life in 2026 but remain in scope until then. Read directly from the document named above. The Swift CSP Document Centre sits behind myswift authentication, so the citation points at the document centre rather than a file URL.",
-      "lastVerified": "2026-08-05"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "ckyc-registry-designation",
@@ -1186,7 +1190,7 @@
         "label": "US HHS — HIPAA Security Rule",
         "url": "https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html"
       },
-      "lastVerified": "2026-08-01"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "hipaa-breach-individual-notice",
@@ -1251,7 +1255,7 @@
         "url": "https://www.iso.org/standard/75106.html"
       },
       "note": "iso.org blocks automated verification; date corroborated across certification bodies.",
-      "lastVerified": "2026-08-01"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "dpdp-consent-manager-rule4",
@@ -1441,11 +1445,11 @@
       "value": "NPCI's Guidelines for Third-Party Application Providers in UPI (circular OC 97, 2020) impose audit and compliance obligations on TPAPs, including audits by CERT-In empanelled auditors and UPI data storage within India; PSP banks retain audit rights over TPAP UPI infrastructure.",
       "effective": null,
       "source": {
-        "label": "NPCI circular OC 97 - Guidelines for TPAPs in UPI (official PDF)",
-        "url": "https://www.npci.org.in/PDF/npci/upi/circular/2020/OC-97-Guidelines-for-TPAPs-in-UPI.pdf"
+        "label": "NPCI UPI circulars (official listing; OC 97 direct PDF withdrawn)",
+        "url": "https://www.npci.org.in/what-we-do/upi/circular"
       },
-      "note": "NPCI's portal blocks automated retrieval; entry verified against the official circular listing on npci.org.in plus multiple corroborating compliance analyses. Confirm clause-level wording against the PDF directly.",
-      "lastVerified": "2026-08-02"
+      "note": "The direct OC 97 PDF was removed from npci.org.in (renders NPCI's 404 page; confirmed in a real browser 11 August 2026). The obligations are retained as corroborated facts - multiple compliance analyses and NPCI's own later TPAP circulars reference OC 97 - and the source points at the official circulars listing, the same treatment as the sibling volume-cap entry. If NPCI republishes the circular, restore the direct link.",
+      "lastVerified": "2026-08-11"
     }
   ]
 }
