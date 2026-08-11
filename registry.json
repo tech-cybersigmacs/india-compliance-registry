@@ -1,10 +1,14 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.22.1",
+  "version": "1.23.0",
   "updated": "2026-08-11",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-08-11",
+      "change": "v1.23.0: GCC expansion for the India-to-global programme, from documents read today. UAE PDPL upgraded from official summaries to the issuing legislation portal (uaelegislation.gov.ae) with gazette metadata (issued 20 Sep 2021, Gazette No. 712 supplement, effective 2 Jan 2022, listed Active) plus a new article-map entry covering DPO, breach reporting, data-subject rights, DPIA and cross-border transfer. NCA ECC gains a compliance-mechanism entry (Article 10(3) continuous compliance; self-assessment, compliance-tool reports and field audits; cloud Subdomain 4-2 binding), read from the official ECC-2:2024 PDF, whose structure figures were independently re-confirmed. SAMA deliberately untouched: the framework PDF endpoint returns an error page even in a real browser today, so the rulebook-sourced entry stands unimproved rather than being filled from secondaries."
+    },
     {
       "date": "2026-08-11",
       "change": "v1.22.1: weekly health remediation. All 14 flagged sources opened in a real browser: 13 confirmed present and re-verified (including the UIDAI AUA/KUA PDF, which the automated check had reported dead - the WAF serves bots HTML but browsers get the PDF). One source genuinely dead: NPCI removed the OC 97 direct PDF; that entry now cites the official UPI circulars listing with the withdrawal noted, matching the sibling entry's treatment. Also fixed: the public GitHub dataset mirror had drifted nine versions behind the site (1.13.0 vs 1.22.0) - synced, and the website deploy now pushes the mirror automatically on version change."
@@ -895,7 +899,7 @@
         "url": "https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf"
       },
       "note": "Counts and scope read directly from the ECC – 2 : 2024 document. NCA's canonical index sits at nca.gov.sa/en/regulatory-documents/controls-list/ecc/, which is unreachable from outside the region; this CDN copy is NCA's own published file and does resolve. Compliance is mandated by Article 10(3) of the NCA Statute and High Order No. 57231 dated 10/11/1439H.",
-      "lastVerified": "2026-08-04"
+      "lastVerified": "2026-08-11"
     },
     {
       "id": "cmmc-rules",
@@ -911,14 +915,40 @@
       "lastVerified": "2026-08-01"
     },
     {
+      "id": "uae-pdpl-structure",
+      "framework": "UAE PDPL",
+      "fact": "Obligations and rights - article map",
+      "value": "Federal Decree-Law 45/2021 requires controllers and processors to meet general obligations (Articles 7-8), report personal data breaches (Article 9), appoint a Data Protection Officer with defined roles (Articles 10-12), honour data-subject rights to information, portability, correction/erasure, restriction and objection (Articles 13-18), secure personal data (Article 20), run data protection impact assessments (Article 21) and control cross-border transfer and sharing (Articles 22-23).",
+      "effective": "2022-01-02",
+      "source": {
+        "label": "UAE Legislation portal - Federal Decree-Law on Protection of Personal Data (official)",
+        "url": "https://uaelegislation.gov.ae/en/legislations/1972"
+      },
+      "note": "Article map read from the official portal's English index on 11 August 2026. The portal's own disclaimer states the Arabic text prevails for interpretation; clause-level wording should be checked against the Arabic original.",
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "nca-ecc-compliance-mechanism",
+      "framework": "NCA ECC (Saudi Arabia)",
+      "fact": "Compliance evaluation mechanism",
+      "value": "Under Article 10(3) of the NCA Statute and High Order No. 57231 (10/11/1439H), in-scope entities must ensure ongoing continuous compliance with the ECC. The NCA evaluates compliance through self-assessments, periodic reports of its compliance tool, and/or field auditing visits, and issues an ECC-2:2024 Assessment and Compliance Tool to organise assessment. Controls under Subdomain 4-2 (Cloud Computing and Hosting Cybersecurity) are binding on entities currently using or planning to use cloud computing and hosting services.",
+      "effective": "2024",
+      "source": {
+        "label": "NCA - Essential Cybersecurity Controls ECC - 2 : 2024 (English), Implementation and Compliance section",
+        "url": "https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf"
+      },
+      "note": "Read from the official ECC-2:2024 document (classification Public, TLP:White) on 11 August 2026.",
+      "lastVerified": "2026-08-11"
+    },
+    {
       "id": "uae-pdpl",
       "framework": "UAE PDPL",
       "fact": "Enactment and effect",
-      "value": "UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data was issued in 2021 and came into effect on 2 January 2022. The DIFC and ADGM financial free zones run their own data-protection regimes in place of the federal law.",
+      "value": "UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data was issued on 20 September 2021, published in Official Gazette No. 712 (supplement) on 26 September 2021, and came into effect on 2 January 2022; the legislation portal lists it as Active. The DIFC and ADGM financial free zones run their own data-protection regimes in place of the federal law.",
       "effective": "2022-01-02",
       "source": {
-        "label": "UAE legislation portal / official summaries",
-        "url": "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws"
+        "label": "UAE Legislation portal - Federal Decree-Law on Protection of Personal Data (official)",
+        "url": "https://uaelegislation.gov.ae/en/legislations/1972"
       },
       "note": "OPEN QUESTION - do not treat as settled. Multiple secondary sources report that the Executive Regulations to Federal Decree-Law 45/2021 have been issued, which would activate full enforcement, but they conflict on the instrument and date (one cites Cabinet Decision No. 33 of 2024, others simply say 2026) and none cite a Cabinet Decision number against a primary UAE government source. Not recorded as fact until confirmed from the official gazette or the UAE Data Office.",
       "lastVerified": "2026-08-11"
