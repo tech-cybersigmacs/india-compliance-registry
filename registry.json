@@ -1,10 +1,46 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.13.0",
+  "version": "1.22.0",
   "updated": "2026-08-07",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-08-08",
+      "change": "v1.22.0: recorded ISO/IEC 27001:2022 bibliographic identity (third edition, October 2022). Content deliberately NOT recorded: the copy available was watermarked as licensed to another organisation and the standard forbids reproduction without permission, so Annex A control counts, clause structure and requirement text are excluded until a copy licensed to CyberSigma is available. The cluster stays thin rather than being filled from material we are not licensed to use."
+    },
+    {
+      "date": "2026-08-08",
+      "change": "v1.21.0: SOC 2 completed from TSP Section 100 itself. Confirms the TSP Section 100 numbering and ASEC as the issuing committee, both previously omitted. Records the common criteria structure (33 criteria, CC1-CC9) and CORRECTS a near-universal secondary claim: the criteria say the security category is addressed in MOST engagements and expressly contemplate examinations where it is not, rather than making it mandatory."
+    },
+    {
+      "date": "2026-08-08",
+      "change": "v1.20.0: IRDAI 2026 entries upgraded from corroborated to read-from-the-document (VER 2.0, April 2026, 175 pages). CORRECTED the applicability entry: it had listed brokers, corporate agents, web aggregators, TPAs, ISNPs and IIB from secondary summaries, but the guidelines say Insurers including FRBs and Insurance Intermediaries, and expressly EXCLUDE agents, micro-insurance agents, PoSPs and individual surveyors. Added auditor eligibility (Annexure IV — CERT-In empanelled with CISA/DISA is an accepted route), the 90-day/30-day submission deadline, and the bar on management-representation reliance."
+    },
+    {
+      "date": "2026-08-08",
+      "change": "v1.19.0: opened the SOC 2 cluster - the largest revenue line with no registry coverage. Only two entries, both sourced from aicpa-cima.com. The detail clients ask about (which category is mandatory, Type 1 versus Type 2, the SSAE 18 / AT-C 205 basis) is not on AICPA's public pages and sits in its paid guide, so it is left OUT rather than written from secondary summaries. SOC 2 turns out to carry the same paywall constraint as ISO."
+    },
+    {
+      "date": "2026-08-08",
+      "change": "v1.18.0: added the DPDP Consent Manager framework - Rule 4 in force 13 November 2026, First Schedule Part A eligibility and Part B obligations. MeitY blocks automated retrieval (403), so these are corroborated rather than primary-read and each entry says so. The February 2026 amendment rules are NOT recorded as affecting Rule 4: sources disagree on whether that instrument touches DPDP at all."
+    },
+    {
+      "date": "2026-08-07",
+      "change": "v1.17.0: recorded Regulation (EU) 2026/1744 (Digital Omnibus on AI, in force 27 July 2026), which postpones Annex III high-risk obligations from 2 August 2026 to 2 December 2027 and Annex I embedded-product obligations to 2 August 2028, and adds Article 5 prohibitions on non-consensual intimate imagery. The Article 111 and 113 entries are retained as the enacted text and now cross-reference the amendment. Found because the freshness monitor flagged the page at 86 days against a 30-day SLA."
+    },
+    {
+      "date": "2026-08-07",
+      "change": "v1.16.0: swept the unguarded single-entry clusters after the IRDAI supersession was missed. Added ISO 22301:2019/Amd 1:2024 and NPCI's TPAP volume-cap deadline of 31 December 2026 plus the OC 215 UPI API guidelines; named the governing Aadhaar regulations and flagged the unread 2025 amendment; recorded the UAE PDPL executive-regulations question as open rather than asserting a contested date."
+    },
+    {
+      "date": "2026-08-07",
+      "change": "v1.15.0: IRDAI Information and Cyber Security Guidelines, 2023 were superseded on 6 April 2026 by the Information and Cybersecurity Guidelines, 2026 (Version 2.0) - added the current entry and restated the 2023 one as superseded history. Replaced the ISNP entry's homepage citation with an actual IRDAI circular evidencing the governing e-commerce guidelines, and added the CERT-In empanelled expert audit option the previous text omitted."
+    },
+    {
+      "date": "2026-08-07",
+      "change": "v1.14.0: consolidated the IRDAI cluster — three framework labels (IRDAI, IRDAI (ISNP), IRDAI (India insurance)) merged to one, and removed a duplicate of the Information and Cyber Security Guidelines, 2023 that cited the same instrument, date and source URL as the fuller entry. IRDAI facts now render on /irdai-cybersecurity-audit/, where previously none did."
+    },
     {
       "date": "2026-08-07",
       "change": "v1.13.0: CKYC (CERSAI) added — 5 entries read from the RBI Master Direction on KYC, 2016 (updated 14 August 2025). Covers CERSAI’s designation as the Central KYC Records Registry by Gazette Notification S.O. 3183(E) of 26 November 2015, the Rule 9(1A) ten-day upload obligation, the phased applicability from the 15 July 2016 live run through to Legal Entity accounts opened on or after 1 April 2021, the Individuals and Legal Entities templates CERSAI revises, and the KYC Identifier download-with-consent mechanism. Added because clients are asking for the service, not because search demand was measurable — with no prior CKYC content the site could not appear for those queries at all."
@@ -204,26 +240,27 @@
       "id": "aua-kua-audit",
       "framework": "UIDAI (Aadhaar)",
       "fact": "AUA / KUA audit duty",
-      "value": "Authentication User Agencies and eKYC User Agencies must have operations audited annually (and on need) by a certified information systems auditor; the report is shared with UIDAI on request.",
+      "value": "Authentication User Agencies and eKYC User Agencies must have operations audited annually (and on need) by a certified information systems auditor; the report is shared with UIDAI on request. The governing instruments are the Aadhaar (Authentication and Offline Verification) Regulations, 2021, together with the Aadhaar (Data Security) Regulations, 2016 and the UIDAI Information Security Policy.",
       "effective": null,
       "source": {
         "label": "UIDAI compliance checklist for controls the AUA/KUA must have in place",
         "url": "https://uidai.gov.in/images/Compliance_checklist_for_certifying_compliance_with_controls__that_the_AUAKUA_is_required_to_have_in_place.pdf"
       },
-      "lastVerified": "2026-08-04"
+      "note": "Aadhaar (Authentication and Offline Verification) Amendment Regulations were made in 2025, with further UIDAI updates in January 2026 (including a revised pre-onboarding AUA/KUA checklist). uidai.gov.in 307-redirects deep links to a single-page app, so the amendment text could not be retrieved automatically and its effect on the audit obligation is UNVERIFIED here - check the current regulation before relying on this entry for scoping.",
+      "lastVerified": "2026-08-07"
     },
     {
       "id": "isnp-audit",
-      "framework": "IRDAI (ISNP)",
+      "framework": "IRDAI",
       "fact": "ISNP audit duty",
-      "value": "Insurance Self-Network Platforms require IRDAI permission (with pre-launch security testing) and an annual audit by an auditor holding a recognised IS-audit qualification (e.g. CISA, or CA with DISA); adverse findings affecting policyholders are reported to IRDAI with an action plan.",
+      "value": "Insurance Self-Network Platforms operate under IRDAI permission per the Guidelines on Insurance e-commerce (circular IRDA/INT/GDL/ECM/055/03/2017, 9 March 2017). The controls, systems, procedures and safeguards of the platform must be reviewed at least once a year, at the applicant's own cost, by an external Certified Information Systems Auditor (CISA), a Chartered Accountant holding DISA (ICAI), or a CERT-In empanelled expert, and the resulting report placed before the Board or its sub-committee.",
       "effective": null,
       "source": {
-        "label": "IRDAI",
-        "url": "https://www.irdai.gov.in/"
+        "label": "IRDAI - circular on online filing for Insurance Self Network Platform (IRDA/INT/CIR/ECM/083/04/2017), citing the governing e-commerce guidelines",
+        "url": "https://irdai.gov.in/document-detail?documentId=384920"
       },
-      "note": "Summarised from IRDAI's ISNP framework; corroborated across multiple compliance publishers.",
-      "lastVerified": "2026-07-31"
+      "note": "The governing instrument is the Guidelines on Insurance e-commerce, IRDA/INT/GDL/ECM/055/03/2017 of 9 March 2017. That guidelines PDF is not retrievable in text form from the IRDAI portal, so the citation points to IRDAI's own follow-on circular, which states the reference number and date verbatim. The audit-clause wording is corroborated across multiple independent summaries; verify against the guidelines PDF before quoting it in a deliverable.",
+      "lastVerified": "2026-08-07"
     },
     {
       "id": "pci-dss-version",
@@ -755,18 +792,6 @@
       "lastVerified": "2026-08-01"
     },
     {
-      "id": "irdai-infosec-2023",
-      "framework": "IRDAI",
-      "fact": "Information and Cyber Security Guidelines, 2023",
-      "value": "IRDAI issued the Information and Cyber Security Guidelines, 2023 on 24 April 2023 — a data-centric, risk-based security framework for insurers and regulated intermediaries, superseding the 2017 guidelines.",
-      "effective": "2023-04-24",
-      "source": {
-        "label": "IRDAI (official document)",
-        "url": "https://irdai.gov.in/document-detail?documentId=3314780"
-      },
-      "lastVerified": "2026-08-01"
-    },
-    {
       "id": "iso-42001-published",
       "framework": "ISO/IEC 42001",
       "fact": "Publication",
@@ -789,7 +814,20 @@
         "label": "EU AI Act — official text (EUR-Lex 2024/1689)",
         "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
       },
-      "lastVerified": "2026-08-01"
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "eu-ai-act-digital-omnibus-2026",
+      "framework": "EU AI Act",
+      "fact": "Digital Omnibus on AI - high-risk deadlines postponed (current)",
+      "value": "Regulation (EU) 2026/1744 of 8 July 2026 (the Digital Omnibus on AI) amends Regulation (EU) 2024/1689 and was published in the Official Journal on 24 July 2026, entering into force on 27 July 2026. It postpones the obligations for high-risk AI systems designated under Article 6(2) and Annex III from 2 August 2026 to 2 December 2027, and for AI embedded in products regulated under Annex I sectoral legislation to 2 August 2028. It also adds prohibitions to Article 5 covering AI that generates or manipulates realistic non-consensual intimate imagery of identifiable individuals. The Article 50 transparency duties applying from 2 August 2026 are unaffected.",
+      "effective": "2026-07-27",
+      "source": {
+        "label": "Regulation (EU) 2026/1744 (Digital Omnibus on AI) - EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng"
+      },
+      "note": "EUR-Lex returned an empty document to automated retrieval, so the amended dates are corroborated across multiple independent legal analyses rather than read from the primary text. The regulation number, adoption date, OJ publication date and entry into force are consistent across every source checked. Confirm article-level wording against the Official Journal before relying on this in a deliverable. The staggered application dates were subsequently amended by Regulation (EU) 2026/1744 (Digital Omnibus on AI); GPAI obligations themselves were not postponed.",
+      "lastVerified": "2026-08-07"
     },
     {
       "id": "eu-ai-act-application-dates",
@@ -801,8 +839,8 @@
         "label": "EUR-Lex — Regulation (EU) 2024/1689 (Artificial Intelligence Act), Official Journal",
         "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689"
       },
-      "note": "Article 113 read verbatim from the Official Journal text. The Regulation was done at Brussels on 13 June 2024 and entered into force on the twentieth day following publication.",
-      "lastVerified": "2026-08-04"
+      "note": "Article 113 read verbatim from the Official Journal text. The Regulation was done at Brussels on 13 June 2024 and entered into force on the twentieth day following publication. AMENDED: Regulation (EU) 2026/1744 (in force 27 July 2026) postponed the Annex III high-risk obligations to 2 December 2027 and the Annex I embedded-product obligations to 2 August 2028. This entry records Article 113 as originally enacted and must not be read on its own as the current position.",
+      "lastVerified": "2026-08-07"
     },
     {
       "id": "eu-ai-act-penalties",
@@ -827,8 +865,8 @@
         "label": "EUR-Lex — Regulation (EU) 2024/1689 (Artificial Intelligence Act), Official Journal",
         "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202401689"
       },
-      "note": "Article 111 read verbatim. These transitions are the reason an organisation can be lawfully operating non-conforming AI today and still face a hard compliance date.",
-      "lastVerified": "2026-08-04"
+      "note": "Article 111 read verbatim. These transitions are the reason an organisation can be lawfully operating non-conforming AI today and still face a hard compliance date. AMENDED: the 2 August 2026 pivot date for high-risk systems was moved by Regulation (EU) 2026/1744; read alongside the Digital Omnibus entry before applying these transitions to a client estate.",
+      "lastVerified": "2026-08-07"
     },
     {
       "id": "sama-csf",
@@ -878,7 +916,8 @@
         "label": "UAE legislation portal / official summaries",
         "url": "https://u.ae/en/about-the-uae/digital-uae/data/data-protection-laws"
       },
-      "lastVerified": "2026-08-01"
+      "note": "OPEN QUESTION - do not treat as settled. Multiple secondary sources report that the Executive Regulations to Federal Decree-Law 45/2021 have been issued, which would activate full enforcement, but they conflict on the instrument and date (one cites Cabinet Decision No. 33 of 2024, others simply say 2026) and none cite a Cabinet Decision number against a primary UAE government source. Not recorded as fact until confirmed from the official gazette or the UAE Data Office.",
+      "lastVerified": "2026-08-07"
     },
     {
       "id": "swift-csp",
@@ -1189,6 +1228,19 @@
       "lastVerified": "2026-08-04"
     },
     {
+      "id": "iso-22301-amd1-2024",
+      "framework": "ISO 22301",
+      "fact": "Amendment 1:2024 (climate action)",
+      "value": "ISO published ISO 22301:2019/Amd 1:2024 in February 2024, adding consideration of climate change to the management system requirements. ISO 22301:2019 remains the current edition - the amendment supplements it rather than replacing it, and a next edition is in development with no confirmed publication date.",
+      "effective": "2024-02",
+      "source": {
+        "label": "ISO 22301:2019/Amd 1:2024 (iso.org)",
+        "url": "https://www.iso.org/standard/88412.html"
+      },
+      "note": "iso.org blocks automated verification; the amendment number, scope and date are corroborated across certification bodies and ISO's own catalogue listing.",
+      "lastVerified": "2026-08-07"
+    },
+    {
       "id": "iso-22301-2019",
       "framework": "ISO 22301",
       "fact": "2019 revision publication",
@@ -1202,16 +1254,185 @@
       "lastVerified": "2026-08-01"
     },
     {
+      "id": "dpdp-consent-manager-rule4",
+      "framework": "DPDP Act 2023",
+      "fact": "Consent Manager registration - Rule 4 in force 13 November 2026",
+      "value": "Rule 4 of the Digital Personal Data Protection Rules, 2025 establishes the registration and oversight framework for Consent Managers and comes into force on 13 November 2026. A Consent Manager is registered with the Data Protection Board of India and acts as a single point of contact through which a Data Principal can give, manage, review and withdraw consent via an accessible, transparent and interoperable platform.",
+      "effective": "2026-11-13",
+      "source": {
+        "label": "MeitY - Digital Personal Data Protection Rules, 2025 (official page)",
+        "url": "https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa"
+      },
+      "note": "MeitY returns HTTP 403 to automated retrieval for both the Rules page and its own FAQ PDF, so this is corroborated across independent legal analyses rather than read from the primary text. Verify against the notified Rules before relying on it in a deliverable.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "dpdp-consent-manager-eligibility",
+      "framework": "DPDP Act 2023",
+      "fact": "Consent Manager eligibility - First Schedule, Part A",
+      "value": "Part A of the First Schedule sets the conditions the Board must be satisfied of before registering a Consent Manager. They include incorporation in India, a minimum net worth of INR 2 crore (adjusted for inflation), sound financial condition and general character of management, and sufficient technical, operational and financial capacity to discharge the role. Directors, key managerial personnel and senior management must be persons of general reputation and record of fairness and integrity.",
+      "effective": "2026-11-13",
+      "source": {
+        "label": "MeitY - Digital Personal Data Protection Rules, 2025, First Schedule Part A",
+        "url": "https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa"
+      },
+      "note": "MeitY returns HTTP 403 to automated retrieval for both the Rules page and its own FAQ PDF, so this is corroborated across independent legal analyses rather than read from the primary text. Verify against the notified Rules before relying on it in a deliverable.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "dpdp-consent-manager-obligations",
+      "framework": "DPDP Act 2023",
+      "fact": "Consent Manager obligations - First Schedule, Part B",
+      "value": "A Consent Manager acts in a fiduciary capacity toward the Data Principal. It must not act as Data Fiduciary or Data Processor for the same Data Principal whose consent it manages, must route personal data in a form it cannot itself read, must treat all Data Fiduciaries neutrally without preferential access, and must retain consent records for at least seven years.",
+      "effective": "2026-11-13",
+      "source": {
+        "label": "MeitY - Digital Personal Data Protection Rules, 2025, First Schedule Part B",
+        "url": "https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa"
+      },
+      "note": "MeitY returns HTTP 403 to automated retrieval for both the Rules page and its own FAQ PDF, so this is corroborated across independent legal analyses rather than read from the primary text. Verify against the notified Rules before relying on it in a deliverable. The conflict rule is the commercially significant one: an organisation cannot register as a Consent Manager for data subjects it also serves as a Data Fiduciary.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "iso-27001-2022-identity",
+      "framework": "ISO/IEC 27001",
+      "fact": "Current edition and title",
+      "value": "The current edition is ISO/IEC 27001:2022, the third edition, published October 2022, titled “Information security, cybersecurity and privacy protection — Information security management systems — Requirements”. It specifies requirements for establishing, implementing, maintaining and continually improving an information security management system, and is the standard against which organisations are certified.",
+      "effective": "2022-10",
+      "source": {
+        "label": "ISO — ISO/IEC 27001:2022 catalogue entry",
+        "url": "https://www.iso.org/standard/27001"
+      },
+      "note": "Bibliographic identity only — title, edition and publication date. The standard is copyright-protected and its terms forbid reproduction or utilisation without permission, so no clause structure, Annex A control counts or requirement text are recorded here. Deeper coverage requires a copy licensed to CyberSigma; a copy licensed to another organisation is not a basis for a public registry. iso.org also returns HTTP 403 to automated retrieval.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "soc2-security-category",
+      "framework": "SOC 2 (AICPA)",
+      "fact": "Security is near-universal but NOT mandatory",
+      "value": "TSP Section 100 paragraph .14 states that the security category “is addressed in most trust services engagements”, and paragraph .15 adds that “although uncommon, there may be circumstances in which the security category is not addressed by a trust services examination”. Where security IS included, ASEC has determined the common criteria alone are suitable and no additional control activity criteria are needed. Where availability, processing integrity, confidentiality or privacy are included, a complete set consists of the common criteria plus the control activity criteria for that category.",
+      "effective": "2022",
+      "source": {
+        "label": "AICPA TSP Section 100, paragraphs .14 and .15",
+        "url": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "note": "Read from TSP Section 100 itself rather than from secondary summaries. This corrects a claim repeated almost universally in secondary sources, which state that Security is mandatory in every SOC 2. The criteria say it is addressed in most engagements and expressly contemplate examinations where it is not.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "soc2-common-criteria-structure",
+      "framework": "SOC 2 (AICPA)",
+      "fact": "Common criteria structure",
+      "value": "The common criteria are the criteria shared by all five trust services categories. They comprise 33 individual criteria organised across nine series, CC1 to CC9. Points of focus sit beneath the criteria and describe characteristics that may be considered when evaluating whether a criterion is met; the concept is drawn from COSO’s Internal Control — Integrated Framework, and points of focus are not themselves requirements to be met one by one.",
+      "effective": "2022",
+      "source": {
+        "label": "AICPA TSP Section 100 — common criteria and points of focus",
+        "url": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "note": "Read from TSP Section 100 itself rather than from secondary summaries. Criterion count derived by enumerating the distinct CC references in the document.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "soc2-trust-services-criteria",
+      "framework": "SOC 2 (AICPA)",
+      "fact": "Trust Services Criteria - current version",
+      "value": "The criteria for a SOC 2 examination are set out in TSP Section 100, “2017 Trust Services Criteria for Security, Availability, Processing Integrity, Confidentiality, and Privacy (With Revised Points of Focus — 2022)”, established by the AICPA’s Assurance Services Executive Committee (ASEC). They cover five categories: Security, Availability, Processing Integrity, Confidentiality and Privacy. The 2022 revision updated the points of focus rather than the criteria themselves, which is why the document is still titled as the 2017 criteria.",
+      "effective": "2022",
+      "source": {
+        "label": "AICPA - 2017 Trust Services Criteria (With Revised Points of Focus - 2022)",
+        "url": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "note": "Read from TSP Section 100 itself rather than from secondary summaries. The TSP Section 100 numbering, previously omitted because AICPA’s public page did not confirm it, is stated on the document’s own title page.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "soc2-engagement-nature",
+      "framework": "SOC 2 (AICPA)",
+      "fact": "What a SOC 2 report is",
+      "value": "AICPA describes the engagement as “SOC 2 - Reporting on an Examination of Controls at a Service Organization Relevant to Security, Availability, Processing Integrity, Confidentiality, or Privacy”. It is an examination of controls at a service organisation, reported on by a CPA firm - not a certification issued by AICPA.",
+      "effective": null,
+      "source": {
+        "label": "AICPA - SOC 2 topic page",
+        "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2"
+      },
+      "note": "Engagement title read from AICPA's own topic page. That SOC 2 is an examination rather than a certification follows directly from that wording and is worth stating, because clients frequently ask for a “SOC 2 certificate”.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "irdai-2026-auditor-eligibility",
+      "framework": "IRDAI",
+      "fact": "Who may perform the audit (Annexure IV)",
+      "value": "Annexure IV sets two alternative routes. Either a Chartered Accountant firm registered with ICAI (partnership or LLP) with at least five years of continuous practice and four partners, including one CISA/DISA holder, one ICAI Fellow, one with three years of cyber or information security audit experience in insurance companies, banks or mutual funds, and one with IT-environment and remote-audit experience — OR, in the guidelines’ own words, a “Cert-In empanelled external systems Auditor holding CISA / DISA certifications”. The auditor must not have been debarred or declared ineligible for corrupt or fraudulent practices by the Government of India, a State Government, IRDAI, SEBI, RBI, ICAI, CERT-In or SFIO.",
+      "effective": "2026-04",
+      "source": {
+        "label": "IRDAI Information and Cybersecurity Guidelines, 2026 — Annexure IV",
+        "url": "https://irdai.gov.in/en/document-detail?documentId=9189223"
+      },
+      "note": "Read from the guidelines document itself (VER 2.0, April 2026, 175 pages) rather than from secondary analyses. The covering circular reference number does not appear in the guidelines body and remains unconfirmed, so it is still not cited. CyberSigma qualifies under the second route as a CERT-In empanelled auditor, without needing to meet the four-partner CA-firm test.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "irdai-2026-audit-submission",
+      "framework": "IRDAI",
+      "fact": "Audit report submission deadline",
+      "value": "Insurers must submit the Audit Report (Annexure III), signed by the auditor and accompanied by the comments of the Board, to IRDAI within 90 days from the end of the financial year OR within 30 days of completion of the audit, whichever is earlier. Foreign Reinsurance Branches whose IT systems interface with overseas parent companies must comply and have the auditor certify per Annexure VI, submitted at the end of every financial year.",
+      "effective": "2026-04",
+      "source": {
+        "label": "IRDAI Information and Cybersecurity Guidelines, 2026 — clause on audit submission",
+        "url": "https://irdai.gov.in/en/document-detail?documentId=9189223"
+      },
+      "note": "Read from the guidelines document itself (VER 2.0, April 2026, 175 pages) rather than from secondary analyses. The covering circular reference number does not appear in the guidelines body and remains unconfirmed, so it is still not cited. The “whichever is earlier” limb is the one commonly missed: completing an audit early shortens the deadline rather than extending it.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "irdai-2026-no-mr-reliance",
+      "framework": "IRDAI",
+      "fact": "Management representation is not acceptable",
+      "value": "Certification under these guidelines may not rest on management representation or on reliance upon the work of other auditors, because the auditor is appointed by regulated entities that must protect policyholder and public data. The auditor is required to perform the work through interviews, document verification, compliance checks and adequate testing of controls.",
+      "effective": "2026-04",
+      "source": {
+        "label": "IRDAI Information and Cybersecurity Guidelines, 2026 — Annexure IV clause 3",
+        "url": "https://irdai.gov.in/en/document-detail?documentId=9189223"
+      },
+      "note": "Read from the guidelines document itself (VER 2.0, April 2026, 175 pages) rather than from secondary analyses. The covering circular reference number does not appear in the guidelines body and remains unconfirmed, so it is still not cited.",
+      "lastVerified": "2026-08-08"
+    },
+    {
+      "id": "irdai-infosec-guidelines-2026",
+      "framework": "IRDAI",
+      "fact": "Information and Cybersecurity Guidelines, 2026 (current)",
+      "value": "IRDAI issued Version 2.0 of its Information and Cyber Security Guidelines in April 2026, replacing the Information and Cyber Security Guidelines, 2023 dated 24 April 2023. They apply to all Insurers including Foreign Re-Insurance Branches (FRBs) and Insurance Intermediaries regulated by IRDAI, and to all data created, received or maintained by Regulated Entities in any form. Insurance Agents, Micro-Insurance Agents, Point of Sale Persons and Individual Surveyors are expressly outside their purview, though Insurers remain responsible for ensuring those entities follow a minimum security framework under the Insurer’s Board-approved policy.",
+      "effective": "2026-04-06",
+      "source": {
+        "label": "IRDAI - Information and Cybersecurity Guidelines, 2026 (official document portal)",
+        "url": "https://irdai.gov.in/en/document-detail?documentId=9189223"
+      },
+      "note": "Read from the guidelines document itself (VER 2.0, April 2026, 175 pages) rather than from secondary analyses. The covering circular reference number does not appear in the guidelines body and remains unconfirmed, so it is still not cited. An earlier version of this entry listed brokers, corporate agents, web aggregators, TPAs, ISNPs and IIB as in-scope; that enumeration came from secondary summaries and is not how the guidelines define scope.",
+      "lastVerified": "2026-08-07"
+    },
+    {
       "id": "irdai-infosec-guidelines-2023",
-      "framework": "IRDAI (India insurance)",
-      "fact": "Information and Cyber Security Guidelines, 2023",
-      "value": "IRDAI issued the Information and Cyber Security Guidelines, 2023 on 24 April 2023 (ref IRDAI/GA&HR/GDL/MISC/88/04/2023), superseding the 2017 guidelines (IRDA/IT/GDL/MISC/082/04/2017) and three subsequent circulars. Scope extends beyond insurers to intermediaries including brokers, corporate agents, web aggregators, TPAs, ISNPs and IIB.",
+      "framework": "IRDAI",
+      "fact": "Information and Cyber Security Guidelines, 2023 (superseded)",
+      "value": "IRDAI issued the Information and Cyber Security Guidelines, 2023 on 24 April 2023 (ref IRDAI/GA&HR/GDL/MISC/88/04/2023), superseding the 2017 guidelines (IRDA/IT/GDL/MISC/082/04/2017) and three subsequent circulars. These were themselves superseded on 6 April 2026 by the IRDAI Information and Cybersecurity Guidelines, 2026 (Version 2.0) - the 2023 text is retained here as the previous baseline, not as the current requirement.",
       "effective": "2023-04-24",
       "source": {
         "label": "IRDAI - Information and Cyber Security Guidelines, 2023 (official document portal)",
         "url": "https://irdai.gov.in/document-detail?documentId=3314780"
       },
-      "lastVerified": "2026-08-02"
+      "lastVerified": "2026-08-07"
+    },
+    {
+      "id": "npci-upi-tpap-cap-2026",
+      "framework": "NPCI / UPI",
+      "fact": "TPAP volume-cap compliance deadline - 31 December 2026",
+      "value": "NPCI's volume-cap guidelines for Third-Party Application Providers in UPI (referencing circular NPCI/UPI/OC-97/2020-21) were originally to bite from 31 December 2024. The compliance timeline for existing TPAPs exceeding the cap was extended by two years, to 31 December 2026. Separately, NPCI issued Guidelines on usage of UPI APIs (OC 215 series, May 2025) requiring PSPs and acquiring banks to monitor and control API usage, with non-compliance exposing them to API restriction, penalties or suspension of new customer onboarding.",
+      "effective": "2026-12-31",
+      "source": {
+        "label": "NPCI UPI circulars (official listing)",
+        "url": "https://www.npci.org.in/circulars/upi"
+      },
+      "note": "npci.org.in returns HTTP 403 to automated retrieval, so circular text could not be read directly. Circular references, the two-year extension to 31 December 2026 and the OC 215 API guidelines are corroborated across independent regulatory-tracking services. Confirm clause wording against the PDFs before relying on this in a deliverable.",
+      "lastVerified": "2026-08-07"
     },
     {
       "id": "npci-upi-tpap-guidelines-oc97",
