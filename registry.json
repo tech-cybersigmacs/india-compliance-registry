@@ -1,10 +1,14 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.23.0",
+  "version": "1.24.0",
   "updated": "2026-08-11",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-08-11",
+      "change": "v1.24.0: deepened the thin frameworks a coverage audit flagged, from primary sources. NCA ECC (Saudi) 2->5 facts read from the official ECC-2:2024 PDF: the full 4-domain/28-subdomain breakdown, the independent-cybersecurity-department and all-Saudi-staffing governance controls (1-2 per High Order 37140), and the four-part control coding scheme. GDPR 3->6 with Records of Processing (Art 30), DPIA (Art 35-36) and DPO (Art 37-39), cited to the consolidated EUR-Lex text. OWASP ASVS gains the v5.0 17-chapter structure (V1-V17) read from the ASVS 5.0 repository, noting the substantial restructure from v4.0.x."
+    },
     {
       "date": "2026-08-11",
       "change": "v1.23.0: GCC expansion for the India-to-global programme, from documents read today. UAE PDPL upgraded from official summaries to the issuing legislation portal (uaelegislation.gov.ae) with gazette metadata (issued 20 Sep 2021, Gazette No. 712 supplement, effective 2 Jan 2022, listed Active) plus a new article-map entry covering DPO, breach reporting, data-subject rights, DPIA and cross-border transfer. NCA ECC gains a compliance-mechanism entry (Article 10(3) continuous compliance; self-assessment, compliance-tool reports and field audits; cloud Subdomain 4-2 binding), read from the official ECC-2:2024 PDF, whose structure figures were independently re-confirmed. SAMA deliberately untouched: the framework PDF endpoint returns an error page even in a real browser today, so the rulebook-sourced entry stands unimproved rather than being filled from secondaries."
@@ -123,6 +127,92 @@
     }
   ],
   "entries": [
+    {
+      "id": "nca-ecc-subdomain-structure",
+      "framework": "NCA ECC (Saudi Arabia)",
+      "fact": "Domain and subdomain structure",
+      "value": "ECC-2:2024 organises its controls under 4 main domains and 28 subdomains: (1) Cybersecurity Governance - 10 subdomains (Strategy; Management; Policies and Procedures; Roles and Responsibilities; Risk Management; Cybersecurity in IT Project Management; Compliance with Standards, Laws and Regulations; Periodical Review and Audit; Cybersecurity in Human Resources; Awareness and Training Program). (2) Cybersecurity Defense - 15 subdomains (Asset Management; Identity and Access Management; Information Systems and Information Processing Facilities Protection; Email Protection; Network Security Management; Mobile Devices Security; Data and Information Protection; Cryptography; Backup and Recovery Management; Vulnerability Management; Penetration Testing; Cybersecurity Event Logs and Monitoring Management; Cybersecurity Incident and Threat Management; Physical Security; Web Application Security). (3) Cybersecurity Resilience - 1 subdomain (Resilience Aspects of Business Continuity Management). (4) Third-Party and Cloud Computing Cybersecurity - 2 subdomains (Third-Party Cybersecurity; Cloud Computing and Hosting Cybersecurity).",
+      "effective": "2024",
+      "source": {
+        "label": "NCA - Essential Cybersecurity Controls ECC - 2 : 2024 (English), Figures 1-2",
+        "url": "https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf"
+      },
+      "note": "Read from the official ECC-2:2024 document (Public, TLP:White) on 11 August 2026; subdomain counts (10+15+1+2) sum to the stated 28.",
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "nca-ecc-saudization",
+      "framework": "NCA ECC (Saudi Arabia)",
+      "fact": "Saudization of cybersecurity positions and independent function",
+      "value": "Under Cybersecurity Governance, ECC-2:2024 requires that a cybersecurity department be established that is INDEPENDENT of the IT/Communications department (control 1-2-1, per High Order No. 37140 dated 14/08/1438H), reporting to the head of the entity or their delegate; that ALL cybersecurity positions be filled with full-time, qualified SAUDI cybersecurity professionals (control 1-2-2); and that a cybersecurity supervisory committee be established (control 1-2-3). The cybersecurity strategy must be documented and approved by the Authorized Official and reviewed at planned intervals (subdomain 1-1).",
+      "effective": "2024",
+      "source": {
+        "label": "NCA - ECC-2:2024 (English), Cybersecurity Governance controls 1-1 and 1-2",
+        "url": "https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf"
+      },
+      "note": "The Saudi-nationals staffing requirement is a distinctive ECC obligation with direct bearing on how a foreign firm supports a Saudi engagement. Read from the document 11 August 2026.",
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "nca-ecc-coding-scheme",
+      "framework": "NCA ECC (Saudi Arabia)",
+      "fact": "Control coding scheme",
+      "value": "ECC-2:2024 decodes as Essential Cybersecurity Controls, version 2, year of issuance 2024. Individual control codes are four-part: Main-domain . Subdomain . Main-control . Sub-control (for example 2-3-2-6). The methodological structure gives each subdomain an objective and a set of numbered control clauses.",
+      "effective": "2024",
+      "source": {
+        "label": "NCA - ECC-2:2024 (English), Figures 3-4 and Table 1",
+        "url": "https://cdn.nca.gov.sa/api/files/public/upload/86e09090-44e4-481f-bc28-355673607654_ECC--2024-EN.pdf"
+      },
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "gdpr-ropa-art30",
+      "framework": "GDPR",
+      "fact": "Records of processing activities (Article 30)",
+      "value": "GDPR Article 30 requires controllers and processors to maintain records of processing activities (RoPA) under their responsibility, including purposes, categories of data subjects and personal data, recipients, third-country transfers, retention time limits and a general description of technical and organisational security measures. The obligation has a limited exemption for organisations under 250 employees, which falls away where processing is not occasional, is likely to result in a risk to rights and freedoms, or involves special-category or criminal-conviction data.",
+      "effective": "2018-05-25",
+      "source": {
+        "label": "Regulation (EU) 2016/679 (GDPR), Article 30 - EUR-Lex consolidated text",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+      },
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "gdpr-dpia-art35",
+      "framework": "GDPR",
+      "fact": "Data protection impact assessment (Article 35)",
+      "value": "GDPR Article 35 requires a data protection impact assessment (DPIA) before processing that is likely to result in a high risk to the rights and freedoms of natural persons - in particular for systematic and extensive automated evaluation (including profiling) with legal or similarly significant effects, large-scale processing of special categories of data, or large-scale systematic monitoring of a publicly accessible area. Where a DPIA indicates high residual risk absent mitigation, Article 36 requires prior consultation with the supervisory authority.",
+      "effective": "2018-05-25",
+      "source": {
+        "label": "Regulation (EU) 2016/679 (GDPR), Articles 35-36 - EUR-Lex consolidated text",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+      },
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "gdpr-dpo-art37",
+      "framework": "GDPR",
+      "fact": "Data protection officer (Articles 37-39)",
+      "value": "GDPR Articles 37-39 require designation of a data protection officer (DPO) where processing is carried out by a public authority, or where the core activities consist of regular and systematic monitoring of data subjects on a large scale, or large-scale processing of special categories of data or criminal-conviction data. The DPO is designated on the basis of professional qualities and expert knowledge of data protection law, must be involved in all data-protection matters, report to the highest management level, and cannot be dismissed or penalised for performing the role.",
+      "effective": "2018-05-25",
+      "source": {
+        "label": "Regulation (EU) 2016/679 (GDPR), Articles 37-39 - EUR-Lex consolidated text",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679"
+      },
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "owasp-asvs-5-chapters",
+      "framework": "OWASP ASVS",
+      "fact": "Version 5.0 chapter structure",
+      "value": "OWASP ASVS 5.0 reorganises its requirements into 17 chapters (V1-V17): V1 Encoding and Sanitization, V2 Validation and Business Logic, V3 Web Frontend Security, V4 API and Web Service, V5 File Handling, V6 Authentication, V7 Session Management, V8 Authorization, V9 Self-contained Tokens, V10 OAuth and OIDC, V11 Cryptography, V12 Secure Communication, V13 Configuration, V14 Data Protection, V15 Secure Coding and Architecture, V16 Security Logging and Error Handling, V17 WebRTC. This is a substantial restructure from the v4.0.x chapter layout - a mapping is needed when moving an assessment from 4.0 to 5.0.",
+      "effective": "2025",
+      "source": {
+        "label": "OWASP Application Security Verification Standard 5.0 repository (CC BY-SA)",
+        "url": "https://github.com/OWASP/ASVS/tree/master/5.0/en"
+      },
+      "lastVerified": "2026-08-11"
+    },
     {
       "id": "dpdp-act-gazette",
       "framework": "DPDP Act 2023",
