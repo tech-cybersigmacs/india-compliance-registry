@@ -1,10 +1,14 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.24.0",
+  "version": "1.25.0",
   "updated": "2026-08-11",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-08-11",
+      "change": "v1.25.0: deepened CMMC and UAE PDPL from primary sources. CMMC 1->4: the three-level structure (L1 FCI/17 practices self-assessed; L2 CUI/110 NIST SP 800-171 R2 controls C3PAO-assessed; L3 highest CUI/NIST SP 800-172 subset DIBCAC-assessed), the 32 CFR Part 170 final rule (effective 16 Dec 2024), the phased DFARS rollout (Phase 1 from 10 Nov 2025, Level 2 certification in contracts from 10 Nov 2026), and applicability across the Defense Industrial Base - current-verified given the shifting timeline. UAE PDPL 2->4: lawful processing and consent (Articles 4-6) and the enforcement structure (complaints Art 24, penalties Art 26, and the Executive Regulation provision Art 28), read from the official legislation portal; the Art 28 fact records that the law provides for Executive Regulations without asserting the contested issuance date."
+    },
     {
       "date": "2026-08-11",
       "change": "v1.24.0: deepened the thin frameworks a coverage audit flagged, from primary sources. NCA ECC (Saudi) 2->5 facts read from the official ECC-2:2024 PDF: the full 4-domain/28-subdomain breakdown, the independent-cybersecurity-department and all-Saudi-staffing governance controls (1-2 per High Order 37140), and the four-part control coding scheme. GDPR 3->6 with Records of Processing (Art 30), DPIA (Art 35-36) and DPO (Art 37-39), cited to the consolidated EUR-Lex text. OWASP ASVS gains the v5.0 17-chapter structure (V1-V17) read from the ASVS 5.0 repository, noting the substantial restructure from v4.0.x."
@@ -127,6 +131,70 @@
     }
   ],
   "entries": [
+    {
+      "id": "cmmc-levels-final-rule",
+      "framework": "CMMC (US DoD)",
+      "fact": "Three levels and final-rule status",
+      "value": "The Cybersecurity Maturity Model Certification (CMMC) Program final rule is codified at 32 CFR Part 170 and took effect on 16 December 2024. It defines three levels: Level 1 (Foundational) - 17 practices protecting Federal Contract Information (FCI), verified by annual self-assessment; Level 2 (Advanced) - the 110 security requirements of NIST SP 800-171 Revision 2, protecting Controlled Unclassified Information (CUI), most requiring a third-party assessment by a Certified Third-Party Assessment Organization (C3PAO); Level 3 (Expert) - Level 2 plus a subset of NIST SP 800-172 requirements for the highest-value CUI, assessed by the Defense Industrial Base Cybersecurity Assessment Center (DIBCAC).",
+      "effective": "2024-12-16",
+      "source": {
+        "label": "32 CFR Part 170 - CMMC Program (eCFR)",
+        "url": "https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-M/part-170"
+      },
+      "note": "Level/assessment structure current-verified 11 August 2026; CMMC rule timelines have shifted repeatedly, so re-check against 32 CFR Part 170 before relying on dates.",
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "cmmc-phased-rollout",
+      "framework": "CMMC (US DoD)",
+      "fact": "Phased contractual rollout (DFARS)",
+      "value": "CMMC requirements enter DoD contracts through the DFARS acquisition rule (48 CFR) on a phased schedule. Phase 1 began 10 November 2025, with Level 1 and Level 2 self-assessment requirements appearing in select solicitations at the CMMC Program Office's discretion. From 10 November 2026, CMMC Level 2 certification (C3PAO-assessed) is added to new and renewing contracts involving CUI, with further phases extending coverage over the following period.",
+      "effective": "2025-11-10",
+      "source": {
+        "label": "CMMC Program - 32 CFR Part 170 and the DFARS 48 CFR acquisition rule (eCFR)",
+        "url": "https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-M/part-170"
+      },
+      "note": "Phase dates current as of 11 August 2026; DoD has adjusted this timeline before.",
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "cmmc-applicability",
+      "framework": "CMMC (US DoD)",
+      "fact": "Who it applies to",
+      "value": "CMMC applies to DoD contractors and subcontractors across the Defense Industrial Base that process, store or transmit Federal Contract Information (FCI) or Controlled Unclassified Information (CUI). The required level flows down through the supply chain by the nature of the information handled: FCI-only work maps to Level 1, CUI to Level 2, and the most sensitive CUI to Level 3. An affirming senior official must attest to compliance in SPRS, and assessments carry a validity period (self-assessments affirmed annually; C3PAO certifications on a three-year cycle).",
+      "effective": "2024-12-16",
+      "source": {
+        "label": "32 CFR Part 170 - CMMC Program scope and assessment (eCFR)",
+        "url": "https://www.ecfr.gov/current/title-32/subtitle-A/chapter-I/subchapter-M/part-170"
+      },
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "uae-pdpl-lawful-processing",
+      "framework": "UAE PDPL",
+      "fact": "Lawful processing and consent (Articles 4-6)",
+      "value": "Federal Decree-Law 45/2021 makes consent the default basis for processing personal data, and Article 4 sets out the cases where personal data may be processed WITHOUT the owner's consent (including where necessary to protect the public interest, for legal proceedings, to protect the data subject's interests, or for the controller's legitimate purposes without prejudice to the data subject's rights). Article 5 fixes the personal-data processing controls (fair, transparent and lawful processing; specified purpose; accuracy; minimisation; and secure retention), and Article 6 sets the terms a valid consent must meet.",
+      "effective": "2022-01-02",
+      "source": {
+        "label": "UAE Legislation portal - Federal Decree-Law 45/2021, Articles 4-6 (official)",
+        "url": "https://uaelegislation.gov.ae/en/legislations/1972"
+      },
+      "note": "Article structure read from the official portal index 11 August 2026; the portal states the Arabic text prevails for interpretation, so clause-level conditions should be checked against the Arabic.",
+      "lastVerified": "2026-08-11"
+    },
+    {
+      "id": "uae-pdpl-enforcement",
+      "framework": "UAE PDPL",
+      "fact": "Complaints, penalties and Executive Regulation (Articles 24-28)",
+      "value": "The law provides an enforcement structure: data subjects may file complaints with the UAE Data Office (Article 24), grievances against the Office's decisions are provided for (Article 25), and administrative penalties for violations are established (Article 26). Article 28 provides for an Executive Regulation to be issued to detail the law's implementation. The Decree-Law thus contemplates its own detailed regulations - whether that Executive Regulation has yet been issued is tracked separately and remains unresolved in public sources.",
+      "effective": "2022-01-02",
+      "source": {
+        "label": "UAE Legislation portal - Federal Decree-Law 45/2021, Articles 24-28 (official)",
+        "url": "https://uaelegislation.gov.ae/en/legislations/1972"
+      },
+      "note": "Article index read from the official portal 11 August 2026. This entry records that Article 28 PROVIDES FOR an Executive Regulation; it does NOT assert that the Regulation has been issued - that is the open question tracked on the uae-pdpl entry.",
+      "lastVerified": "2026-08-11"
+    },
     {
       "id": "nca-ecc-subdomain-structure",
       "framework": "NCA ECC (Saudi Arabia)",
