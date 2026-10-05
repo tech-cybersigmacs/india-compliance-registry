@@ -1,10 +1,14 @@
 {
   "name": "CyberSigma India Compliance Registry",
-  "version": "1.25.0",
-  "updated": "2026-08-11",
+  "version": "1.26.0",
+  "updated": "2026-10-05",
   "license": "CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/",
   "attribution": "CyberSigma — https://cybersigmacs.com/compliance-registry/",
   "changelog": [
+    {
+      "date": "2026-10-05",
+      "change": "v1.26.0: RBI cyber/IT framework supersession recorded. On 31 July 2026 the RBI (Cybersecurity, Technology: Risk, Resilience and Assurance Framework) Directions, 2026 (Commercial Banks: RBI/DoS/2026-27/410) repealed BOTH the 2016 Cyber Security Framework in Banks and the November 2023 IT Governance, Risk, Controls and Assurance Practices Master Direction (plus ~626 circulars), effective immediately with no transition window, via entity-specific Directions for commercial banks, SFBs, payments banks, UCBs, AIFIs, NBFCs and CICs. Added the 2026 Directions as the current entry and restated the 2016 and 2023 instruments as repealed history (supersededOn/supersededBy)."
+    },
     {
       "date": "2026-08-11",
       "change": "v1.25.0: deepened CMMC and UAE PDPL from primary sources. CMMC 1->4: the three-level structure (L1 FCI/17 practices self-assessed; L2 CUI/110 NIST SP 800-171 R2 controls C3PAO-assessed; L3 highest CUI/NIST SP 800-172 subset DIBCAC-assessed), the 32 CFR Part 170 final rule (effective 16 Dec 2024), the phased DFARS rollout (Phase 1 from 10 Nov 2025, Level 2 certification in contracts from 10 Nov 2026), and applicability across the Defense Industrial Base - current-verified given the shifting timeline. UAE PDPL 2->4: lawful processing and consent (Articles 4-6) and the enforcement structure (complaints Art 24, penalties Art 26, and the Executive Regulation provision Art 28), read from the official legislation portal; the Art 28 fact records that the law provides for Executive Regulations without asserting the contested issuance date."
@@ -131,6 +135,775 @@
     }
   ],
   "entries": [
+    {
+      "id": "cobit-2019",
+      "framework": "COBIT 2019",
+      "fact": "ISACA enterprise IT governance framework",
+      "value": "COBIT 2019 is ISACA's framework for the governance and management of enterprise information and technology, and the successor to COBIT 5. It is built around six governance principles and 40 governance and management objectives grouped into five domains (Evaluate-Direct-Monitor, Align-Plan-Organise, Build-Acquire-Implement, Deliver-Service-Support, and Monitor-Evaluate-Assess). It is designed to be tailored to an organisation's size, strategy, risk profile and sourcing model using components such as processes, structures, policies, information, skills and culture, and applies to any enterprise seeking to align IT with business goals while balancing value, risk and resources.",
+      "source": {
+        "label": "ISACA - COBIT",
+        "url": "https://www.isaca.org/resources/cobit"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "nist-privacy-framework",
+      "framework": "NIST Privacy Framework",
+      "fact": "Voluntary privacy risk-management framework (v1.0)",
+      "value": "The NIST Privacy Framework: A Tool for Improving Privacy through Enterprise Risk Management (Version 1.0) is a voluntary framework from the U.S. National Institute of Standards and Technology to help organisations identify and manage privacy risk. It is organised into five functions (Identify-P, Govern-P, Control-P, Communicate-P and Protect-P) subdivided into categories and subcategories, and is designed to align structurally with the NIST Cybersecurity Framework. It is technology-, sector- and law-agnostic and can be used by organisations of any size.",
+      "effective": "2020-01-16",
+      "source": {
+        "label": "NIST - Privacy Framework v1.0 (CSRC)",
+        "url": "https://csrc.nist.gov/pubs/itlb/2020/06/nist-privacy-framework/final"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "nist-sp-800-207-zta",
+      "framework": "NIST SP 800-207 (Zero Trust)",
+      "fact": "Zero Trust Architecture",
+      "value": "NIST Special Publication 800-207, Zero Trust Architecture, is a U.S. NIST publication defining zero trust concepts and an abstract model of components, deployment scenarios and use cases for enterprises adopting zero trust. It describes zero trust as moving defences from static network perimeters to focus on users, assets and resources, with access decisions made per session based on policy and continuous verification. It is aimed at enterprise network architects and is a widely referenced federal baseline for zero-trust guidance.",
+      "effective": "2020-08-11",
+      "source": {
+        "label": "NIST SP 800-207 - Zero Trust Architecture (CSRC)",
+        "url": "https://csrc.nist.gov/pubs/sp/800/207/final"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "mitre-attack",
+      "framework": "MITRE ATT&CK",
+      "fact": "Adversary tactics and techniques knowledge base",
+      "value": "MITRE ATT&CK is a globally accessible, curated knowledge base of adversary tactics and techniques based on real-world observations, maintained by the MITRE Corporation. It is structured around tactics (adversary goals), techniques and sub-techniques (how goals are achieved) and procedures, organised into matrices for Enterprise, Mobile and ICS environments. It is used across the private sector, government and the security community as a foundation for threat modelling, detection engineering and defensive assessment, and is freely available.",
+      "source": {
+        "label": "MITRE - ATT&CK knowledge base",
+        "url": "https://attack.mitre.org/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "cis-benchmarks",
+      "framework": "CIS Benchmarks",
+      "fact": "Consensus secure-configuration baselines",
+      "value": "CIS Benchmarks are consensus-developed secure configuration recommendations from the Center for Internet Security (CIS) for hardening technologies against attack, distinct from the outcome-oriented CIS Critical Security Controls. They cover more than 100 baselines across many vendor product families, including operating systems, cloud platforms, containers, databases, network devices, mobile devices and server and desktop software. They are produced through a global consensus process, available as free PDFs for non-commercial use, and mapped to frameworks such as the NIST CSF, ISO 27001, PCI DSS and HIPAA.",
+      "source": {
+        "label": "CIS - CIS Benchmarks",
+        "url": "https://www.cisecurity.org/cis-benchmarks"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "stateramp-govramp",
+      "framework": "StateRAMP / GovRAMP",
+      "fact": "Cloud security authorisation for state and local government",
+      "value": "StateRAMP is a non-profit programme that standardises cloud security verification for state, local, tribal and education (SLTT) government entities, and in 2025 it rebranded to GovRAMP to reflect a broader whole-of-state mission. It is built on NIST SP 800-53 control baselines and operates on a complete-once, use-many model so a provider can be authorised once and reused across participating jurisdictions, with verification levels scaling by control count. It applies to cloud service providers selling to participating government entities and to the governments requiring independent security validation.",
+      "source": {
+        "label": "StateRAMP / GovRAMP - official site",
+        "url": "https://govramp.org/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "pdpa-thailand",
+      "framework": "PDPA (Thailand)",
+      "fact": "Thailand Personal Data Protection Act B.E. 2562 (2019)",
+      "value": "Thailand's Personal Data Protection Act B.E. 2562 (2019) is the country's comprehensive data protection law, enforced by the Personal Data Protection Committee (PDPC). It governs the collection, use and disclosure of personal data by data controllers and processors, requiring a lawful basis (often consent), data-subject rights, security safeguards and rules on cross-border transfers. After pandemic-related postponements its main operative provisions took full effect on 1 June 2022, and it applies to organisations processing the personal data of individuals in Thailand, including certain extraterritorial processing.",
+      "effective": "2022-06-01",
+      "source": {
+        "label": "Personal Data Protection Committee (PDPC) Thailand - official portal",
+        "url": "https://www.pdpc.or.th/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "uk-gdpr-dpa-2018",
+      "framework": "UK GDPR & DPA 2018",
+      "fact": "UK data protection legal framework",
+      "value": "The UK GDPR together with the Data Protection Act 2018 form the United Kingdom's data protection framework, regulated and enforced by the Information Commissioner's Office (ICO). The UK GDPR sets the core principles, lawful bases and data-subject rights, while the DPA 2018 supplements it with UK-specific exemptions, rules for law-enforcement and intelligence processing, and the ICO's powers and penalties. It applies to organisations processing the personal data of individuals in the UK; the DPA 2018 took effect on 25 May 2018 and the UK GDPR applied following the Brexit transition.",
+      "effective": "2018-05-25",
+      "source": {
+        "label": "ICO - Data Protection Act 2018 / UK GDPR",
+        "url": "https://ico.org.uk/about-the-ico/what-we-do/legislation-we-cover/data-protection-act-2018/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "australia-privacy-act-apps",
+      "framework": "Privacy Act (Australia)",
+      "fact": "Privacy Act 1988 and the 13 Australian Privacy Principles",
+      "value": "The Privacy Act 1988 is Australia's principal legislation protecting the handling of personal information, regulated by the Office of the Australian Information Commissioner (OAIC). At its core are the 13 Australian Privacy Principles (APPs), which govern how APP entities collect, use, disclose, store, secure and provide access to personal information. It applies to most Australian Government agencies and to private-sector organisations with annual turnover above AUD 3 million (plus certain others); the APPs commenced on 12 March 2014.",
+      "effective": "2014-03-12",
+      "source": {
+        "label": "OAIC - Australian Privacy Principles",
+        "url": "https://www.oaic.gov.au/privacy/australian-privacy-principles"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "ffiec-it-handbook",
+      "framework": "FFIEC",
+      "fact": "IT Examination Handbook for U.S. financial institutions",
+      "value": "The FFIEC Information Technology Examination Handbook is a set of examination booklets issued by the Federal Financial Institutions Examination Council to guide examiners in assessing the IT and cybersecurity risk of U.S. financial institutions and their service providers. It comprises booklets such as Information Security, Management, Business Continuity Management, and Architecture, Infrastructure and Operations, covering governance, risk identification, controls, incident response and third-party oversight. It applies to banks, credit unions and other financial institutions supervised by the FFIEC member agencies.",
+      "source": {
+        "label": "FFIEC - IT Examination Handbook InfoBase",
+        "url": "https://ithandbook.ffiec.gov/it-booklets/information-security"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "pci-ssf",
+      "framework": "PCI SSF",
+      "fact": "Software Security Framework (successor to PA-DSS)",
+      "value": "The PCI Software Security Framework (SSF) is a collection of standards and validation programmes from the PCI Security Standards Council that promotes security in payment software and replaced PA-DSS. It comprises two standards: the Secure Software Standard, which assesses payment-software products, and the Secure Software Lifecycle (Secure SLC) Standard, which assesses a vendor's ongoing secure-development processes. It applies to payment-software vendors and their products; PA-DSS was formally retired at the end of October 2022, after which the SSF became the applicable framework.",
+      "effective": "2022-10-31",
+      "source": {
+        "label": "PCI SSC - Software Security Framework",
+        "url": "https://www.pcisecuritystandards.org/standards/software-security-framework/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "mas-trm-guidelines",
+      "framework": "MAS TRM (Singapore)",
+      "fact": "Technology Risk Management Guidelines (2021)",
+      "value": "The Technology Risk Management (TRM) Guidelines are risk-management principles and best-practice standards issued by the Monetary Authority of Singapore (MAS) for financial institutions. The revised 2021 guidelines set expectations for technology-risk governance and oversight, secure system development, resilience, incident response and third-party and cloud-risk management to strengthen cyber resilience. They apply to all MAS-regulated financial institutions - including banks, insurers, fund managers and payment service providers - and were issued on 18 January 2021.",
+      "effective": "2021-01-18",
+      "source": {
+        "label": "MAS - Technology Risk Management Guidelines",
+        "url": "https://www.mas.gov.sg/regulation/guidelines/technology-risk-management-guidelines"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "bahrain-pdpl",
+      "framework": "Bahrain PDPL",
+      "fact": "Bahrain Personal Data Protection Law (Law No. 30 of 2018)",
+      "value": "Law No. 30 of 2018 with respect to Personal Data Protection is Bahrain's national data protection statute, enforced by the Personal Data Protection Authority established under the Ministry of Justice and Islamic Affairs. It applies to the processing of personal data of individuals in Bahrain by data managers and processors in the public or private sector. As a core rule it prohibits processing personal data without the data subject's explicit consent except on specified legal grounds, and it restricts transferring personal data outside Bahrain unless an adequate level of protection or a specific authorisation exists.",
+      "effective": "2019-08-01",
+      "source": {
+        "label": "Kingdom of Bahrain, Personal Data Protection Authority - Law No. 30 of 2018",
+        "url": "https://www.pdp.gov.bh/en/index.html"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "oman-pdpl",
+      "framework": "Oman PDPL",
+      "fact": "Oman Personal Data Protection Law (Royal Decree 6/2022)",
+      "value": "The Personal Data Protection Law, promulgated by Royal Decree 6/2022, is Oman's national data protection statute, with the Ministry of Transport, Communications and Information Technology designated as the regulatory and enforcement authority. It governs the processing of personal data and grants data owners rights including consent, withdrawal of consent, correction and deletion, while imposing obligations on controllers and processors. The law comprises 32 articles across five chapters, requires the data owner's consent before processing, and is supported by an Executive Regulation issued in 2024.",
+      "effective": "2022-02-09",
+      "source": {
+        "label": "Sultanate of Oman, MTCIT - Royal Decree 6/2022 Personal Data Protection Law",
+        "url": "https://mtcit.gov.om/sectors/governance/personal"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "tisax",
+      "framework": "TISAX",
+      "fact": "Automotive information security assessment and exchange",
+      "value": "TISAX (Trusted Information Security Assessment Exchange) is an assessment and results-exchange mechanism for information security governed by the ENX Association on behalf of the German automotive industry association VDA. Vehicle manufacturers, suppliers and service providers use it to demonstrate and mutually recognise information security across the automotive supply chain, avoiding duplicate audits. Assessments are performed by ENX-approved audit providers against the VDA Information Security Assessment (ISA) catalogue, which is based on key aspects of ISO/IEC 27001, and the resulting labels are valid for three years.",
+      "source": {
+        "label": "ENX Association - TISAX",
+        "url": "https://enx.com/en-US/TISAX/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "pci-pin-security",
+      "framework": "PCI PIN Security",
+      "fact": "Secure management of payment PIN data",
+      "value": "The PCI PIN Security Requirements are a standard from the PCI Security Standards Council governing the secure management, processing and transmission of personal identification number (PIN) data during payment card transactions at ATMs and point-of-sale terminals. It applies to acquirers, processors and their agents that handle PIN-based transactions and cryptographic key management. The requirements are grouped into control objectives covering secure equipment and key management, PIN encryption, and the generation, distribution and destruction of cryptographic keys.",
+      "source": {
+        "label": "PCI Security Standards Council - PIN Security Requirements",
+        "url": "https://www.pcisecuritystandards.org/standards/pin-security/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "pci-p2pe",
+      "framework": "PCI P2PE",
+      "fact": "Validated point-to-point encryption solutions",
+      "value": "The PCI Point-to-Point Encryption (P2PE) Standard, from the PCI Security Standards Council, defines requirements for solutions that cryptographically protect account data from the point of capture at a merchant device until it reaches a secure decryption environment. It applies to P2PE solution providers, component providers and merchants using PCI-listed P2PE solutions, and a validated solution can significantly reduce a merchant's applicable PCI DSS scope. It sets requirements across domains including secure devices, secure applications, encryption and decryption environments, and cryptographic key operations.",
+      "source": {
+        "label": "PCI Security Standards Council - Point-to-Point Encryption (P2PE)",
+        "url": "https://www.pcisecuritystandards.org/standards/point-to-point-encryption-p2pe/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "pci-3ds-core",
+      "framework": "PCI 3DS",
+      "fact": "PCI 3DS Core Security Standard for 3-D Secure environments",
+      "value": "The PCI 3DS Core Security Standard, from the PCI Security Standards Council, defines physical and logical security requirements for environments where EMV 3-D Secure functions such as the Access Control Server (ACS), Directory Server (DS) and 3DS Server (3DSS) are performed. It applies to entities performing these 3DS functions and is separate and independent from PCI DSS. It is structured in two parts: baseline security requirements for the environment, and 3DS-specific requirements protecting 3DS data, technologies and processes that support card-not-present authentication.",
+      "source": {
+        "label": "PCI Security Standards Council - PCI 3DS Core Security Standard",
+        "url": "https://www.pcisecuritystandards.org/standards/pci-3ds-core/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso-20000-1",
+      "framework": "ISO/IEC 20000-1",
+      "fact": "IT service management system requirements",
+      "value": "ISO/IEC 20000-1 is an international standard jointly published by ISO and IEC that specifies requirements to establish, implement, maintain and continually improve a service management system (SMS) for the planning, design, transition, delivery and improvement of services. It applies to any organisation delivering services, regardless of type or size, and is the only part of the ISO/IEC 20000 family to which an organisation can be certified. The current third edition is ISO/IEC 20000-1:2018.",
+      "effective": "2018-09-01",
+      "source": {
+        "label": "ISO/IEC 20000-1:2018 - IT service management (ISO)",
+        "url": "https://www.iso.org/standard/70636.html"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso-9001",
+      "framework": "ISO 9001",
+      "fact": "Quality management system requirements",
+      "value": "ISO 9001 is the international standard published by ISO specifying requirements for a quality management system (QMS), and it is the only standard in the ISO 9000 family to which organisations can be certified. It applies to organisations of any size and sector that need to consistently provide products and services meeting customer and applicable regulatory requirements and to enhance customer satisfaction. Its requirements are structured around context of the organisation, leadership, planning, support, operation, performance evaluation and improvement (Plan-Do-Check-Act). The current edition is ISO 9001:2015.",
+      "effective": "2015-09-01",
+      "source": {
+        "label": "ISO 9001:2015 - Quality management systems (ISO)",
+        "url": "https://www.iso.org/standard/62085.html"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso-27005",
+      "framework": "ISO/IEC 27005",
+      "fact": "Guidance on managing information security risks",
+      "value": "ISO/IEC 27005 is an international standard jointly published by ISO and IEC that provides guidance to support the establishment and operation of information security risk management within an ISO/IEC 27001 ISMS. It applies to organisations of all types and sizes and gives a structured approach for identifying, analysing, evaluating and treating information security risks, aligned with ISO/IEC 27001:2022 and ISO 31000:2018. It is guidance rather than a certifiable requirements standard; the current edition is ISO/IEC 27005:2022.",
+      "effective": "2022-10-01",
+      "source": {
+        "label": "ISO/IEC 27005:2022 - Information security risk management (ISO)",
+        "url": "https://www.iso.org/standard/80585.html"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso-31000",
+      "framework": "ISO 31000",
+      "fact": "Principles and guidelines for risk management",
+      "value": "ISO 31000 is an international standard published by ISO that provides principles, a framework and a process for managing risk of any type faced by an organisation. It is not specific to any industry or sector, can be applied to any activity at all levels, and is guidance rather than a certifiable requirements standard. It centres on creating and protecting value and describes a risk management process of scope and context establishment, risk assessment (identification, analysis, evaluation), risk treatment, monitoring and communication. The current edition is ISO 31000:2018.",
+      "effective": "2018-02-01",
+      "source": {
+        "label": "ISO 31000:2018 - Risk management (ISO)",
+        "url": "https://www.iso.org/standard/65694.html"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "rbi-it-governance-md-2023",
+      "framework": "RBI",
+      "fact": "IT Governance, Risk, Controls and Assurance Practices Directions (2023) - repealed 2026",
+      "value": "The Reserve Bank of India (Information Technology Governance, Risk, Controls and Assurance Practices) Directions, 2023 (RBI/2023-24/107), effective 1 April 2024, was a Master Direction that consolidated earlier RBI IT-governance and cyber-risk instructions and required a board-level IT governance framework, an IT and information-security risk management framework and periodic information systems audits. IMPORTANT - NO LONGER IN FORCE: this Master Direction was repealed on 31 July 2026 and replaced, together with the 2016 Cyber Security Framework and other circulars, by the entity-specific RBI (Cybersecurity, Technology: Risk, Resilience and Assurance Framework) Directions, 2026. Regulated entities must now comply with the applicable 2026 Directions (see 'rbi-cyber-tech-risk-framework-2026').",
+      "effective": "2024-04-01",
+      "supersededOn": "2026-07-31",
+      "supersededBy": "rbi-cyber-tech-risk-framework-2026",
+      "source": {
+        "label": "RBI Master Direction RBI/2023-24/107 - IT Governance, Risk, Controls and Assurance Practices (repealed 31 July 2026)",
+        "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12562"
+      },
+      "lastVerified": "2026-10-05"
+    },
+    {
+      "id": "rbi-cyber-tech-risk-framework-2026",
+      "framework": "RBI",
+      "fact": "Cybersecurity, Technology: Risk, Resilience and Assurance Framework Directions (2026)",
+      "value": "The RBI (Cybersecurity, Technology: Risk, Resilience and Assurance Framework) Directions, 2026 are the current, in-force cyber and technology-risk directions for RBI-regulated entities. Issued on 31 July 2026 (Commercial Banks version: RBI/DoS/2026-27/410, DoS.CO.CSITEG.4/31.01.015/2026-27) and effective immediately with no transition window, they repealed and consolidated the 2016 Cyber Security Framework in Banks, the November 2023 IT Governance, Risk, Controls and Assurance Practices Master Direction and around 626 other circulars into a single framework. RBI issued separate, entity-specific Directions under this common title for commercial banks, small finance banks, payments banks, urban co-operative banks, all-India financial institutions, NBFCs and credit information companies. Core requirements include board oversight and an IT Strategy Committee, an independent CISO (GM rank), baseline cybersecurity controls, a 24x7 Cyber Security Operations Centre (C-SOC) with SIEM, risk-based information systems audit, VA at least every six months and penetration testing at least annually for critical and internet-facing systems, and reporting of cyber incidents to the RBI on the DAKSH platform within six hours of detection.",
+      "effective": "2026-07-31",
+      "source": {
+        "label": "RBI RBI/DoS/2026-27/410 - Cybersecurity, Technology: Risk, Resilience and Assurance Framework Directions, 2026",
+        "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=13643"
+      },
+      "lastVerified": "2026-10-05"
+    },
+    {
+      "id": "rbi-account-aggregator",
+      "framework": "Account Aggregator (RBI)",
+      "fact": "NBFC-Account Aggregator consent-based data-sharing framework",
+      "value": "The Master Direction - Non-Banking Financial Company - Account Aggregator (Reserve Bank) Directions, 2016 (RBI/DNBR/2016-17/46), issued and enforced by the RBI, governs a class of NBFC that retrieves and consolidates a customer's financial information from multiple financial information providers and shares it - only with the customer's explicit consent - with financial information users. Only companies registered with the RBI may operate as Account Aggregators, and each must hold a net owned fund of at least two crore rupees. No financial information may be retrieved, shared or transferred without explicit, standardised consent, and the AA acts purely as a data intermediary that does not store, use or transact on the data.",
+      "effective": "2016-09-02",
+      "source": {
+        "label": "RBI Master Direction DNBR.PD.009/03.10.119/2016-17 - NBFC Account Aggregator",
+        "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=10598"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "hitech-act",
+      "framework": "HITECH (US)",
+      "fact": "Health IT adoption and strengthened HIPAA enforcement",
+      "value": "The Health Information Technology for Economic and Clinical Health (HITECH) Act was enacted as part of the American Recovery and Reinvestment Act of 2009 and is administered by the U.S. Department of Health and Human Services, with HIPAA enforcement carried out by its Office for Civil Rights. It promotes adoption and meaningful use of electronic health records while strengthening the privacy and security protections established under HIPAA. It extends HIPAA Security Rule safeguards and direct liability to business associates, establishes tiered civil monetary penalty categories, and introduces breach-notification requirements for covered entities and business associates handling protected health information.",
+      "effective": "2009-02-17",
+      "source": {
+        "label": "U.S. HHS - HITECH Act Enforcement Interim Final Rule",
+        "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/hitech-act-enforcement-interim-final-rule/index.html"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "ccpa-cpra-california",
+      "framework": "CCPA / CPRA (US-California)",
+      "fact": "California consumer privacy law, as amended by the CPRA",
+      "value": "The California Consumer Privacy Act of 2018 gives California residents rights over the personal information businesses collect about them, and was amended by the voter-approved California Privacy Rights Act (Proposition 24), whose additional protections took effect on 1 January 2023. It is enforced by the California Attorney General and the California Privacy Protection Agency. It applies to for-profit businesses doing business in California that meet any threshold (over 25 million US dollars gross annual revenue; buying, selling or sharing the personal information of 100,000 or more California residents; or deriving 50 percent or more of revenue from selling residents personal information). Consumers have rights to know, delete, correct, opt out of sale or sharing, limit use of sensitive information, and non-discrimination.",
+      "effective": "2023-01-01",
+      "source": {
+        "label": "California Attorney General - California Consumer Privacy Act (CCPA)",
+        "url": "https://oag.ca.gov/privacy/ccpa"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "lgpd-brazil",
+      "framework": "LGPD (Brazil)",
+      "fact": "Brazil General Data Protection Law (Lei 13.709/2018)",
+      "value": "The Lei Geral de Protecao de Dados Pessoais (Law No. 13.709), enacted 14 August 2018, regulates the processing of personal data by individuals and public or private entities to protect the fundamental rights of freedom and privacy. It is enforced by the Autoridade Nacional de Protecao de Dados (ANPD). It applies to any processing carried out in Brazil, or that offers goods or services to or processes the data of individuals located in Brazil, and it sets out legal bases for processing, data-subject rights, and administrative penalties (fines up to 2 percent of Brazil revenue, capped at 50 million reais per infraction).",
+      "effective": "2018-08-14",
+      "source": {
+        "label": "Presidencia da Republica (Planalto) - Lei No. 13.709/2018",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "pipeda-canada",
+      "framework": "PIPEDA (Canada)",
+      "fact": "Canada federal private-sector privacy law",
+      "value": "The Personal Information Protection and Electronic Documents Act (S.C. 2000, c. 5) governs how private-sector organisations collect, use and disclose personal information in the course of commercial activity, and sets rules for electronic documents and signatures. It is overseen by the Office of the Privacy Commissioner of Canada through a complaint-and-investigation mechanism. It applies to private-sector organisations across Canada (except in provinces with substantially similar legislation) and includes mandatory breach-reporting and record-keeping provisions.",
+      "source": {
+        "label": "Justice Laws Website (Government of Canada) - PIPEDA (S.C. 2000, c. 5)",
+        "url": "https://laws-lois.justice.gc.ca/eng/acts/P-8.6/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "pdpa-singapore",
+      "framework": "PDPA (Singapore)",
+      "fact": "Singapore Personal Data Protection Act 2012",
+      "value": "The Personal Data Protection Act 2012 governs the collection, use, disclosure and care of personal data by organisations in Singapore, and establishes the national Do Not Call registry. It is administered and enforced by the Personal Data Protection Commission (PDPC). Its main data-protection obligations came into force on 2 July 2014, and it imposes consent, purpose-limitation, protection, accountability and mandatory data-breach-notification obligations on private-sector organisations.",
+      "effective": "2014-07-02",
+      "source": {
+        "label": "Personal Data Protection Commission (PDPC) Singapore - PDPA",
+        "url": "https://www.pdpc.gov.sg/overview-of-pdpa/the-legislation/personal-data-protection-act"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "popia-south-africa",
+      "framework": "POPIA (South Africa)",
+      "fact": "South Africa Protection of Personal Information Act 4 of 2013",
+      "value": "The Protection of Personal Information Act 4 of 2013 (POPIA) gives effect to the constitutional right to privacy by regulating how public and private bodies process personal information in South Africa. It is monitored and enforced by the Information Regulator (South Africa). Its substantive conditions for lawful processing became fully enforceable on 1 July 2021, requiring responsible parties to meet eight conditions for lawful processing and to safeguard personal information, with penalties including administrative fines and, for some offences, imprisonment.",
+      "effective": "2021-07-01",
+      "source": {
+        "label": "Information Regulator (South Africa) - POPIA",
+        "url": "https://inforegulator.org.za/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "glba-safeguards-rule",
+      "framework": "GLBA (US)",
+      "fact": "FTC Safeguards Rule under the Gramm-Leach-Bliley Act",
+      "value": "The Safeguards Rule (16 CFR Part 314), mandated by the 1999 Gramm-Leach-Bliley Act, requires financial institutions under FTC jurisdiction to develop, implement and maintain an information security programme with administrative, technical and physical safeguards to protect customer information. It is enforced by the Federal Trade Commission and applies to entities engaged in activities that are financial in nature. The amended rule also requires reporting to the FTC of notification events in which the unencrypted customer information of 500 or more consumers is acquired without authorisation.",
+      "source": {
+        "label": "Federal Trade Commission - Gramm-Leach-Bliley Act / Safeguards Rule",
+        "url": "https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "sox-2002",
+      "framework": "SOX (US)",
+      "fact": "Sarbanes-Oxley Act of 2002 (Sections 302 and 404)",
+      "value": "The Sarbanes-Oxley Act of 2002 (Public Law 107-204), enacted 30 July 2002, reformed corporate financial reporting and auditing after major accounting scandals and created the Public Company Accounting Oversight Board (PCAOB). It is enforced primarily by the U.S. Securities and Exchange Commission and applies to U.S. public companies and their auditors. Section 302 requires senior executives to personally certify the accuracy of financial statements; Section 404 requires management, and the external auditor, to assess and report on the effectiveness of internal control over financial reporting.",
+      "effective": "2002-07-30",
+      "source": {
+        "label": "U.S. Congress (congress.gov) - H.R.3763, Sarbanes-Oxley Act of 2002",
+        "url": "https://www.congress.gov/bill/107th-congress/house-bill/3763"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "fisma-2014",
+      "framework": "FISMA (US)",
+      "fact": "Federal Information Security Modernization Act of 2014",
+      "value": "The Federal Information Security Modernization Act of 2014 amended the 2002 Federal Information Security Management Act and updated the U.S. federal government information-security framework. CISA, with OMB oversight, administers implementation of information-security policies for non-national-security federal Executive Branch systems. It requires the head of each federal agency to provide information-security protections commensurate with risk (44 U.S.C. 3554), to report on the effectiveness of their security programmes, and to report major information-security incidents.",
+      "effective": "2014-12-18",
+      "source": {
+        "label": "CISA - Federal Information Security Modernization Act",
+        "url": "https://www.cisa.gov/topics/cyber-threats-and-advisories/federal-information-security-modernization-act"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "fedramp",
+      "framework": "FedRAMP (US)",
+      "fact": "U.S. government cloud security authorisation programme",
+      "value": "FedRAMP (Federal Risk and Authorization Management Program) is a U.S. government-wide programme providing a standardised approach to security assessment, authorisation and continuous monitoring for cloud products and services, based on NIST SP 800-53 controls. It is operated by the General Services Administration and maintains a marketplace of authorised cloud services, authorising agencies and recognised third-party assessment organisations. Cloud service providers must obtain a FedRAMP authorisation (Low, Moderate or High baseline) to sell cloud services to U.S. federal agencies.",
+      "source": {
+        "label": "General Services Administration - FedRAMP.gov",
+        "url": "https://www.fedramp.gov/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "rbi-cyber-security-framework-banks-2016",
+      "framework": "RBI",
+      "fact": "Cyber Security Framework in Banks (2016) - repealed 2026",
+      "value": "The RBI circular Cyber Security Framework in Banks (RBI/2015-16/418, DBS.CO/CSITE/BC.11/33.01.001/2015-16), dated 2 June 2016, required scheduled commercial banks to put in place a board-approved cyber-security policy distinct from their IT or IS-security policy, a baseline cyber-security and resilience framework, continuous surveillance (for example through a Security Operations Centre), a Cyber Crisis Management Plan and incident reporting to the RBI. IMPORTANT - NO LONGER IN FORCE: this circular was repealed on 31 July 2026 and replaced, together with the November 2023 IT Governance Master Direction and other circulars, by the entity-specific RBI (Cybersecurity, Technology: Risk, Resilience and Assurance Framework) Directions, 2026 (see 'rbi-cyber-tech-risk-framework-2026').",
+      "effective": "2016-06-02",
+      "supersededOn": "2026-07-31",
+      "supersededBy": "rbi-cyber-tech-risk-framework-2026",
+      "source": {
+        "label": "RBI Notification RBI/2015-16/418 - Cyber Security Framework in Banks (repealed 31 July 2026)",
+        "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=10435"
+      },
+      "lastVerified": "2026-10-05"
+    },
+    {
+      "id": "uk-cyber-essentials",
+      "framework": "Cyber Essentials (UK)",
+      "fact": "NCSC-backed baseline cyber security certification",
+      "value": "Cyber Essentials is the UK government backed minimum standard of cyber security for organisations of all sizes, developed by the National Cyber Security Centre (NCSC) and delivered through IASME as the official partner. It certifies organisations against five technical controls: firewalls, secure configuration, security update management, user access control and malware protection. Certification (Cyber Essentials, or the audited Cyber Essentials Plus) is required to bid for certain UK government contracts handling sensitive or personal information and is increasingly required across supply chains.",
+      "source": {
+        "label": "National Cyber Security Centre (NCSC) - Cyber Essentials",
+        "url": "https://www.ncsc.gov.uk/cyberessentials/overview"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "au-essential-eight",
+      "framework": "Essential Eight (Australia)",
+      "fact": "ASD/ACSC eight prioritised mitigation strategies with maturity model",
+      "value": "The Essential Eight is a set of prioritised baseline mitigation strategies published by the Australian Signals Directorate Australian Cyber Security Centre (ASD ACSC). The eight strategies are: patch applications, patch operating systems, multi-factor authentication, restrict administrative privileges, application control, restrict Microsoft Office macros, user application hardening, and regular backups. It is supported by the Essential Eight Maturity Model (first published June 2017), which defines Maturity Levels Zero to Three; organisations are advised to reach the same maturity level across all eight strategies before progressing to a higher level.",
+      "source": {
+        "label": "Australian Cyber Security Centre (ASD) - Essential Eight",
+        "url": "https://www.cyber.gov.au/business-government/asds-cyber-security-frameworks/essential-eight"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso27002-controls-guidance",
+      "framework": "ISO/IEC 27002",
+      "fact": "Information security controls guidance (companion to 27001)",
+      "value": "ISO/IEC 27002:2022 is an international standard from ISO and IEC that provides a reference set of information security controls with detailed implementation guidance. It is a guidance document and is not certifiable on its own; organisations use it to implement the controls selected in an ISO/IEC 27001 ISMS. The 2022 edition reorganises the controls into the same four themes as ISO/IEC 27001:2022 Annex A - organisational, people, physical and technological - covering 93 controls.",
+      "effective": "2022-02-15",
+      "source": {
+        "label": "ISO/IEC 27002:2022 - Information security controls (ISO)",
+        "url": "https://www.iso.org/standard/75652.html"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso27701-pims",
+      "framework": "ISO/IEC 27701",
+      "fact": "Privacy Information Management System (PIMS)",
+      "value": "ISO/IEC 27701 is an international standard from ISO and IEC that specifies requirements and guidance for a Privacy Information Management System (PIMS). It applies to organisations acting as PII controllers and PII processors and adds privacy-specific requirements and controls on top of an information security management system. First published in 2019 as an extension to ISO/IEC 27001 and 27002, it lets organisations manage privacy risk and demonstrate accountability, and can be certified alongside ISO/IEC 27001.",
+      "source": {
+        "label": "ISO/IEC 27701 - Privacy information management (ISO)",
+        "url": "https://www.iso.org/standard/27701"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso27017-cloud-security",
+      "framework": "ISO/IEC 27017",
+      "fact": "Code of practice for cloud-services security controls",
+      "value": "ISO/IEC 27017:2015 is an international standard from ISO and IEC providing a code of practice for information security controls for cloud services, based on ISO/IEC 27002. It gives cloud-specific implementation guidance for both cloud service providers and cloud service customers and adds cloud-specific controls covering shared roles and responsibilities, return or removal of customer assets, segregation in virtual environments, and administrative operations.",
+      "effective": "2015-12-15",
+      "source": {
+        "label": "ISO/IEC 27017:2015 - Cloud services security controls (ISO)",
+        "url": "https://www.iso.org/standard/43757.html"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso27018-cloud-pii",
+      "framework": "ISO/IEC 27018",
+      "fact": "Protection of PII in public clouds (PII processors)",
+      "value": "ISO/IEC 27018 is an international standard from ISO and IEC establishing controls to protect personally identifiable information (PII) in public cloud computing environments where the cloud provider acts as a PII processor. It applies to public cloud service providers that process PII on behalf of their customers and builds on ISO/IEC 27002, addressing consent, transparency, restrictions on use, disclosure and cross-border handling of cloud-processed PII, and accountability.",
+      "source": {
+        "label": "ISO/IEC 27018 - Protection of PII in public clouds (ISO)",
+        "url": "https://www.iso.org/standard/27018"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "nist-sp-800-53",
+      "framework": "NIST SP 800-53",
+      "fact": "Security and privacy controls catalog (Rev. 5)",
+      "value": "NIST Special Publication 800-53, Revision 5, is a U.S. National Institute of Standards and Technology publication providing a comprehensive catalog of security and privacy controls for information systems and organisations. It supports U.S. federal agencies (and is widely used by others) in protecting operations, assets and individuals from a broad range of threats and privacy risks. Revision 5 consolidates security and privacy controls into a single catalog, makes them outcome-based and control-organisation-neutral, and groups them into 20 control families.",
+      "effective": "2020-09-23",
+      "source": {
+        "label": "NIST SP 800-53 Rev. 5 - Security and Privacy Controls (NIST CSRC)",
+        "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "nist-sp-800-171",
+      "framework": "NIST SP 800-171",
+      "fact": "Protecting Controlled Unclassified Information (CUI)",
+      "value": "NIST Special Publication 800-171 gives recommended security requirements for protecting the confidentiality of Controlled Unclassified Information (CUI) when it resides in nonfederal systems and organisations. It applies to contractors, universities and other nonfederal entities that process, store or transmit CUI on behalf of U.S. federal agencies, and underpins the DoD's CMMC Level 2. Revision 3 organises the security requirements into 17 families derived from NIST SP 800-53.",
+      "effective": "2024-05-14",
+      "source": {
+        "label": "NIST SP 800-171 Rev. 3 - Protecting CUI (NIST CSRC)",
+        "url": "https://csrc.nist.gov/pubs/sp/800/171/r3/final"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "cis-controls-v8",
+      "framework": "CIS Controls",
+      "fact": "CIS Critical Security Controls v8 - 18 controls, 153 safeguards",
+      "value": "The CIS Critical Security Controls (Version 8) are a prioritised set of cybersecurity best practices published and maintained by the Center for Internet Security (CIS). Version 8 consolidates the guidance into 18 top-level Controls containing 153 Safeguards, organised into three Implementation Groups (IG1 to IG3) scaled to an organisation's risk and resources. They apply to organisations of any size and are mapped to other frameworks such as the NIST Cybersecurity Framework.",
+      "effective": "2021-05-18",
+      "source": {
+        "label": "CIS Critical Security Controls Version 8 (Center for Internet Security)",
+        "url": "https://www.cisecurity.org/controls/v8"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "csa-ccm-star",
+      "framework": "CSA CCM / STAR",
+      "fact": "Cloud Controls Matrix and the STAR registry",
+      "value": "The Cloud Controls Matrix (CCM) is a cybersecurity control framework for cloud computing published by the Cloud Security Alliance (CSA), organised into 17 domains of cloud security and privacy controls and mapped to leading standards and regulations. It defines responsibilities between cloud service providers and customers and is used to assess cloud security posture. Together with the Consensus Assessments Initiative Questionnaire (CAIQ), the CCM is the basis for CSA's Security, Trust, Assurance and Risk (STAR) programme and its public registry of provider self-assessments and third-party certifications.",
+      "effective": "2021-01-21",
+      "source": {
+        "label": "CSA Cloud Controls Matrix (Cloud Security Alliance)",
+        "url": "https://cloudsecurityalliance.org/research/cloud-controls-matrix"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "hitrust-csf",
+      "framework": "HITRUST CSF",
+      "fact": "Certifiable framework harmonising 60+ authoritative sources",
+      "value": "The HITRUST CSF is a certifiable security and privacy control framework created and maintained by HITRUST. It harmonises and maps to more than 60 authoritative sources - including standards, regulations and frameworks such as ISO 27001, the NIST publications, HIPAA and PCI DSS - into a single control library. Originally focused on healthcare, it is applicable across sectors and risk levels, and organisations can achieve HITRUST certification (e1, i1 or r2) through validated assessments performed with an authorised external assessor.",
+      "source": {
+        "label": "HITRUST CSF (HITRUST Alliance)",
+        "url": "https://hitrustalliance.net/hitrust-framework"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "soc-1-icfr",
+      "framework": "SOC 1 (AICPA)",
+      "fact": "Service-organisation controls relevant to financial reporting",
+      "value": "SOC 1 (SOC for Service Organizations: ICFR) is a reporting framework governed by the AICPA under attestation standard SSAE 18 (AT-C section 320). It is an examination by an independent service auditor of the controls at a service organisation that are likely to be relevant to its user entities' internal control over financial reporting (ICFR). The report is used by user entities and their financial-statement auditors, and can be a Type 1 (design of controls at a point in time) or Type 2 (design and operating effectiveness over a period).",
+      "source": {
+        "label": "SOC 1 - SOC for Service Organizations: ICFR (AICPA & CIMA)",
+        "url": "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-1"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "eu-nis2-directive",
+      "framework": "NIS2 (EU)",
+      "fact": "EU-wide cybersecurity directive for essential and important entities",
+      "value": "Directive (EU) 2022/2555 (NIS2), adopted on 14 December 2022, lays down measures for a high common level of cybersecurity across the European Union and repeals the earlier NIS Directive (EU) 2016/1148. It applies to essential and important entities across critical sectors (energy, transport, banking, health, digital infrastructure, public administration and more) and imposes cybersecurity risk-management measures, governance accountability, and significant-incident reporting, backed by supervision and enforcement. As a directive it must be transposed into each member state's national law.",
+      "effective": "2022-12-14",
+      "source": {
+        "label": "Directive (EU) 2022/2555 (NIS2) - EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "eu-dora-regulation",
+      "framework": "DORA (EU)",
+      "fact": "Digital Operational Resilience Act for the financial sector",
+      "value": "The Digital Operational Resilience Act (DORA), Regulation (EU) 2022/2554, is a directly applicable EU regulation adopted on 14 December 2022 that sets uniform requirements for the security of network and information systems of financial entities and their critical ICT third-party providers. It applies to a broad range of EU-regulated financial entities - banks, insurers, investment firms, payment institutions and others - requiring ICT risk management, ICT-related incident reporting, digital operational resilience testing, and oversight of ICT third-party risk. It became applicable across all member states on 17 January 2025.",
+      "effective": "2025-01-17",
+      "source": {
+        "label": "Regulation (EU) 2022/2554 (DORA) - EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "dpdp-consent-notice",
+      "framework": "DPDP Act 2023",
+      "fact": "Consent and notice (Sections 5-6)",
+      "value": "Under Section 6 of the DPDP Act 2023, consent to process personal data must be free, specific, informed, unconditional and unambiguous, given through a clear affirmative action, and limited to the personal data necessary for the specified purpose. A Data Principal may withdraw consent at any time, and withdrawing it must be as easy as giving it. Under Section 5, every request for consent must be accompanied or preceded by a notice, in clear and plain language, that gives an itemised description of the personal data and the purpose of processing, the manner in which the Data Principal may exercise their rights and withdraw consent, and the manner of making a complaint to the Data Protection Board.",
+      "source": {
+        "label": "The Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023) - MeitY",
+        "url": "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "dpdp-breach-notification-rule-7",
+      "framework": "DPDP Act 2023",
+      "fact": "Personal data breach notification (DPDP Rules 2025, Rule 7)",
+      "value": "On becoming aware of a personal data breach, a Data Fiduciary must, without delay, intimate each affected Data Principal in a concise, plain-language notice describing the breach, its likely consequences, the mitigation measures the Data Fiduciary has taken, the safety measures the Data Principal can take, and contact details for queries. It must also intimate the Data Protection Board of India without delay with the initial facts (nature, extent, timing, location and likely impact), followed by a detailed report - including broad facts, causes, mitigation and the notifications made to Data Principals - within 72 hours of becoming aware, or a longer period the Board allows on request.",
+      "source": {
+        "label": "Digital Personal Data Protection Rules, 2025, Rule 7 - MeitY",
+        "url": "https://www.meity.gov.in/documents/act-and-policies/digital-personal-data-protection-rules-2025-gDOxUjMtQWa"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "rbi-digital-payment-security-controls-2021",
+      "framework": "RBI",
+      "fact": "Master Direction on Digital Payment Security Controls (2021)",
+      "value": "The RBI Master Direction on Digital Payment Security Controls (RBI/2020-21/74, DoS.CO.CSITE.SEC.No.1852/31.01.015/2020-21), dated 18 February 2021, sets out a robust governance structure and common minimum standards of security controls for digital payment products and services. It covers areas such as internet banking, mobile banking and card payments, along with customer protection and grievance redressal. It applies to Scheduled Commercial Banks (excluding Regional Rural Banks), Small Finance Banks, Payments Banks and credit-card-issuing NBFCs, and took effect within six months of being placed on the RBI website.",
+      "effective": "2021-02-18",
+      "source": {
+        "label": "RBI Master Direction - Digital Payment Security Controls (RBI/2020-21/74)",
+        "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12032"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso42001-aims-standard",
+      "framework": "ISO/IEC 42001",
+      "fact": "ISO/IEC 42001:2023 - AI management systems",
+      "value": "ISO/IEC 42001:2023 is the first certifiable international standard for an Artificial Intelligence Management System (AIMS), published in December 2023. It specifies requirements for establishing, implementing, maintaining and continually improving an AIMS, so that an organisation developing, providing or using AI does so responsibly. Organisations build the management system against clauses 4 to 10 and select applicable controls from Annex A, a reference set of 38 controls across 9 objectives covering areas such as data quality, the AI system lifecycle, transparency, human oversight and AI impact assessment. Certification is by an accredited body through a Stage 1 (documentation) and Stage 2 (operational) audit.",
+      "effective": "2023-12-18",
+      "source": {
+        "label": "ISO/IEC 42001:2023 - Artificial intelligence management system (ISO)",
+        "url": "https://www.iso.org/standard/42001"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "pci-structure-goals-requirements",
+      "framework": "PCI DSS",
+      "fact": "Structure - six goals and twelve requirements",
+      "value": "PCI DSS organises its controls into six goals (control objectives) that break down into 12 core requirements: build and maintain a secure network and systems (Req 1-2), protect account data (Req 3-4), maintain a vulnerability management programme (Req 5-6), implement strong access control measures (Req 7-9), regularly monitor and test networks (Req 10-11), and maintain an information security policy (Req 12). Each requirement contains testing procedures and, in v4.0, a defined and a customised approach. The current version, PCI DSS v4.0.1, was published in June 2024 as a limited revision of v4.0 that corrects minor errors and clarifies language without adding new requirements.",
+      "effective": "2024-06-11",
+      "source": {
+        "label": "PCI SSC - Document Library (PCI DSS v4.0.1)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "rbi-payment-data-localisation",
+      "framework": "RBI",
+      "fact": "Storage of Payment System Data (data localisation)",
+      "value": "The RBI circular on Storage of Payment System Data (RBI/2017-18/153, DPSS.CO.OD No.2785/06.08.005/2017-2018), dated 6 April 2018, requires all system providers to ensure that the entire data relating to the payment systems they operate is stored in a system only in India. This includes the full end-to-end transaction details and any information collected, carried or processed as part of the payment message or instruction. Providers were given six months to comply and to submit a System Audit Report conducted by a CERT-In empanelled auditor. It applies to all Payment System Providers authorised under the Payment and Settlement Systems Act, 2007.",
+      "effective": "2018-04-06",
+      "source": {
+        "label": "RBI Notification RBI/2017-18/153 - Storage of Payment System Data",
+        "url": "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11244"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "rbi-payment-aggregators-directions-2025",
+      "framework": "RBI",
+      "fact": "Regulation of Payment Aggregators Directions, 2025",
+      "value": "The Reserve Bank of India (Regulation of Payment Aggregators) Directions, 2025 (RBI/DPSS/2025-26/141), issued 15 September 2025 and in force from 31 December 2025, consolidate the earlier 2020, 2021 and 2023 payment-aggregator guidelines into a single framework covering online and face-to-face (proximity) payment aggregators. A non-bank entity carrying on payment-aggregator business must obtain RBI authorisation, and must have a minimum net worth of INR 15 crore at the time of application, rising to a minimum net worth of INR 25 crore by the end of the third financial year after authorisation, maintained thereafter. The directions also cover governance, KYC of merchants, escrow-account operation, security and reporting.",
+      "effective": "2025-12-31",
+      "source": {
+        "label": "RBI Master Direction RBI/DPSS/2025-26/141 - Regulation of Payment Aggregators Directions, 2025",
+        "url": "https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12896"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "nist-csf-2-functions",
+      "framework": "NIST CSF",
+      "fact": "CSF 2.0 - six core functions",
+      "value": "The NIST Cybersecurity Framework 2.0, released on 26 February 2024 (NIST CSWP 29), is the first major revision since 2014. It organises cybersecurity outcomes into six core functions: Govern (new in 2.0 - establishing and monitoring the organisation's cybersecurity risk-management strategy, expectations and policy), Identify, Protect, Detect, Respond and Recover. CSF 2.0 broadens the framework's scope from critical infrastructure to organisations of all sizes and sectors, and strengthens its treatment of governance and supply-chain risk. The functions are intended to be performed concurrently and continuously.",
+      "effective": "2024-02-26",
+      "source": {
+        "label": "NIST CSWP 29 - The NIST Cybersecurity Framework (CSF) 2.0",
+        "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso27001-statement-of-applicability",
+      "framework": "ISO/IEC 27001",
+      "fact": "Statement of Applicability (clause 6.1.3)",
+      "value": "ISO/IEC 27001:2022 clause 6.1.3(d) requires the organisation to produce a Statement of Applicability (SoA) as part of its information-security risk-treatment process. The SoA must contain the necessary controls (those chosen to treat risks, whether from Annex A or elsewhere), the justification for their inclusion, whether each necessary control is implemented, and the justification for excluding any of the Annex A controls. The SoA is a mandatory, auditable document and the reference point auditors use to confirm that all applicable controls are addressed.",
+      "source": {
+        "label": "ISO/IEC 27001:2022 - Information security management systems (ISO)",
+        "url": "https://www.iso.org/standard/27001"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "dpdp-data-principal-rights",
+      "framework": "DPDP Act 2023",
+      "fact": "Rights of the Data Principal (Sections 11-14)",
+      "value": "Chapter III of the DPDP Act 2023 grants every Data Principal four rights against a Data Fiduciary: the right to access information about the personal data being processed and the identities of other fiduciaries with whom it has been shared (Section 11); the right to correction, completion, updating and erasure of personal data (Section 12); the right of grievance redressal through the Data Fiduciary's or Consent Manager's mechanism, exercisable before approaching the Data Protection Board (Section 13); and the right to nominate another individual to exercise these rights in the event of the Data Principal's death or incapacity (Section 14). Section 15 sets out corresponding duties of the Data Principal.",
+      "source": {
+        "label": "The Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023) - MeitY",
+        "url": "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "iso27001-annexa-control-count",
+      "framework": "ISO/IEC 27001",
+      "fact": "Annex A control count (2022 revision)",
+      "value": "ISO/IEC 27001:2022 Annex A contains 93 controls organised into four themes: Organisational (37 controls, clause 5), People (8 controls, clause 6), Physical (14 controls, clause 7) and Technological (34 controls, clause 8). This restructures the 114 controls across 14 domains of the 2013 edition - the count fell through consolidation and merging, not a reduction in scope. Organisations certified to ISO/IEC 27001:2013 were required to transition to the 2022 edition.",
+      "effective": "2022-10-25",
+      "source": {
+        "label": "ISO/IEC 27001:2022 - Information security management systems (ISO)",
+        "url": "https://www.iso.org/standard/27001"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "pci-merchant-levels-visa",
+      "framework": "PCI DSS",
+      "fact": "Merchant validation levels (Visa)",
+      "value": "Visa classifies merchants into four levels by annual transaction volume, which sets the validation path. Level 1: more than 6 million Visa transactions per year across all channels (or any merchant Visa designates Level 1, e.g. after a compromise) - annual on-site assessment and Report on Compliance (ROC) plus quarterly network scan. Level 2: 1 to 6 million transactions per year - annual Self-Assessment Questionnaire (SAQ) and quarterly scan. Level 3: 20,000 to 1 million Visa e-commerce transactions per year - SAQ and quarterly scan. Level 4: fewer than 20,000 Visa e-commerce transactions, or up to 1 million total transactions per year - SAQ and scan as required by the acquirer. Other card brands set broadly similar but not identical thresholds; the acquirer confirms a merchant's level.",
+      "source": {
+        "label": "Visa - Account Information Security (AIS) Program and PCI",
+        "url": "https://corporate.visa.com/en/resources/security-compliance.html"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "pci-saq-types",
+      "framework": "PCI DSS",
+      "fact": "Self-Assessment Questionnaire (SAQ) types",
+      "value": "PCI DSS defines nine SAQ types, each scoped to how a merchant handles cardholder data: SAQ A (fully outsourced e-commerce or mail/telephone order, no data handling); SAQ A-EP (e-commerce that partially controls the payment page); SAQ B (imprint machines or standalone dial-out terminals, no electronic storage); SAQ B-IP (standalone PTS-approved IP-connected terminals); SAQ C-VT (web-based virtual terminal, one transaction at a time); SAQ C (payment application connected to the internet); SAQ P2PE (hardware terminals in a validated PCI P2PE solution); SAQ D for Merchants (all others that store, process or transmit cardholder data - the most comprehensive); and SAQ D for Service Providers. A merchant who cannot meet an SAQ's eligibility criteria, or who is a Level 1 merchant, completes a full Report on Compliance (ROC) instead of an SAQ.",
+      "source": {
+        "label": "PCI SSC - Document Library (Self-Assessment Questionnaires)",
+        "url": "https://www.pcisecuritystandards.org/document_library/"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "dpdp-children-section-9",
+      "framework": "DPDP Act 2023",
+      "fact": "Children's personal data (Section 9)",
+      "value": "Under Section 9 of the DPDP Act 2023, a 'child' is a person who has not completed 18 years of age. Before processing a child's personal data (or that of a person with a disability who has a lawful guardian), a Data Fiduciary must obtain verifiable consent of the parent or lawful guardian. A Data Fiduciary must not undertake processing likely to cause a detrimental effect on the well-being of a child, and must not carry out tracking, behavioural monitoring, or targeted advertising directed at children. The Central Government may exempt notified classes of Data Fiduciary, or notified purposes, from some of these conditions.",
+      "source": {
+        "label": "The Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023) - MeitY",
+        "url": "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "dpdp-sdf-section-10",
+      "framework": "DPDP Act 2023",
+      "fact": "Significant Data Fiduciary (Section 10)",
+      "value": "Under Section 10 of the DPDP Act 2023, the Central Government may notify any Data Fiduciary or class of Data Fiduciaries as a Significant Data Fiduciary (SDF), based on factors including the volume and sensitivity of personal data processed, risk to the rights of Data Principals, potential effect on the sovereignty and integrity of India, risk to electoral democracy, and security of the State and public order. An SDF must: appoint a Data Protection Officer based in India who represents it under the Act and is the point of contact for grievance redressal; appoint an independent data auditor to evaluate compliance; and undertake periodic Data Protection Impact Assessments, periodic audits, and such other measures as may be prescribed.",
+      "source": {
+        "label": "The Digital Personal Data Protection Act, 2023 (Act No. 22 of 2023) - MeitY",
+        "url": "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf"
+      },
+      "lastVerified": "2026-08-13"
+    },
+    {
+      "id": "gdpr-article-83-fines",
+      "framework": "GDPR",
+      "fact": "Administrative fines (Article 83)",
+      "value": "GDPR Article 83 sets two maximum tiers for administrative fines, applied case by case and taken as whichever amount is higher. Lower tier: up to EUR 10 million, or up to 2% of total worldwide annual turnover of the preceding financial year - for breaches of obligations such as security of processing, records of processing, and data protection by design and by default. Higher tier: up to EUR 20 million, or up to 4% of total worldwide annual turnover - for breaches of the basic principles for processing (including conditions for consent), data subjects' rights, and the rules on transfers to third countries. Fines must be effective, proportionate and dissuasive.",
+      "source": {
+        "label": "Regulation (EU) 2016/679 (GDPR), Article 83 - EUR-Lex",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      "lastVerified": "2026-08-13"
+    },
     {
       "id": "cmmc-levels-final-rule",
       "framework": "CMMC (US DoD)",
@@ -934,15 +1707,17 @@
     {
       "id": "rbi-it-governance-md",
       "framework": "RBI",
-      "fact": "IT Governance Master Direction",
-      "value": "Master Direction on Information Technology Governance, Risk, Controls and Assurance Practices (RBI/DoS/2023-24/107) issued 7 November 2023; effective 1 April 2024. Requires an IT governance framework, information/cyber security policies and periodic IT risk assurance for regulated entities.",
+      "fact": "IT Governance Master Direction (repealed 2026)",
+      "value": "Master Direction on Information Technology Governance, Risk, Controls and Assurance Practices (RBI/DoS/2023-24/107) issued 7 November 2023; effective 1 April 2024. NO LONGER IN FORCE: repealed on 31 July 2026 and replaced, with the 2016 Cyber Security Framework and other circulars, by the entity-specific RBI (Cybersecurity, Technology: Risk, Resilience and Assurance Framework) Directions, 2026.",
       "effective": "2024-04-01",
+      "supersededOn": "2026-07-31",
+      "supersededBy": "rbi-cyber-tech-risk-framework-2026",
       "source": {
-        "label": "Reserve Bank of India (Master Direction RBI/DoS/2023-24/107)",
+        "label": "Reserve Bank of India (Master Direction RBI/DoS/2023-24/107, repealed 31 July 2026)",
         "url": "https://www.rbi.org.in/"
       },
       "note": "Direction number cited for retrieval via RBI notification search; RBI deep links are session-bound.",
-      "lastVerified": "2026-08-01"
+      "lastVerified": "2026-10-05"
     },
     {
       "id": "rbi-it-outsourcing-md",
